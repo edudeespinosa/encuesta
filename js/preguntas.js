@@ -21,7 +21,7 @@
 		};
 		$.ajax({
 			data: parametros,
-			url: "<?php echo '../controller/print_questions.php'?>",
+			url: "/controller/print_questions.php",
 			//url: "<?php echo base_url()?>index.php/pedidos/registrar_pedido5/"+idProveedor,
 			type: 'post',
 			beforeSend: function(){
