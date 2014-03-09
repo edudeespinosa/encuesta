@@ -87,18 +87,25 @@
 					//$(".navigation").html("");
 					//alert(response);
 					todo=response.split(";");
-					resultado = "<div class=\"wut\">";
+					resultado = "<div class=\"wut\"><div class=\"final_questions\">";
 					mmm=new Array();
-					for(i=0;i<16;i++){
+					for(i=0;i<8;i++){
 						//p=getPregunta(i+1);
-						mmm[i]=todo[i];
-						if(i%2==0)
-							resultado+="<p class=\"pares\">";
-						else
-							resultado+="<p class=\"impares\">";
+						mmm[i]=todo[(i*2)];
+						resultado+="<p class=\"pares\">";
 						resultado+=mmm[i]+"</p>";
 					}
 					resultado+="</div>";
+					resultado = "<div class=\"wut\"><div class=\"final_answers\">";
+					mmm=new Array();
+					for(i=0;i<8;i++){
+						//p=getPregunta(i+1);
+						mmm[i]=todo[(i*2)+1];
+						resultado+="<p class=\"pares\">";
+						resultado+=mmm[i]+"</p>";
+					}
+					resultado+="</div>";
+
 					//alert(todo[1]);
 					$("#pregunta").flippy({
 					    color_target: "#FDFDFD",
