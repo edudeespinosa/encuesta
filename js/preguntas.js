@@ -87,7 +87,7 @@
 					//$(".navigation").html("");
 					//alert(response);
 					todo=response.split(";");
-					string resultado = "<div class=\"wut\">";
+					resultado = "<div class=\"wut\">";
 					mmm=new Array();
 					for(i=0;i<16;i++){
 						//p=getPregunta(i+1);
