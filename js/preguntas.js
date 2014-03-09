@@ -16,11 +16,6 @@
 			else return 2;
 		}
 		function imprime_pregunta(pregunta){
-		pathArray = window.location.href.split( '/' );
-		protocol = pathArray[0];
-		host = pathArray[2];
-		url_2 = protocol + '://' + host;
-
 		var parametros = {
 			"numPregunta" : pregunta
 		};
