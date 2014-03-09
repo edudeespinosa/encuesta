@@ -1,4 +1,4 @@
-<?php session_start();?>
+<?php session_start(); ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,6 +12,7 @@
 		<div class="bienvenida">
 			Bienvenido
 			<?php
+			session_start();
 			if($_SESSION['username'])
 				echo "<div id='user'>".$_SESSION['username']."</div>";
 			else { 
