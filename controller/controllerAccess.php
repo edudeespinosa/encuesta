@@ -1,8 +1,6 @@
 <?php 
 	if(!isset($_SESSION))
 		session_start()
-?>
-<?php
 	include_once("../models/modelo.php");
 	$user = $_POST['user'];
 	$password = $_POST['password'];
