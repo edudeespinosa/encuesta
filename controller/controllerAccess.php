@@ -1,5 +1,4 @@
-<?php session_start();
-
+<?php
 	include_once("../models/modelo.php");
 	$user = $_POST['user'];
 	$password = $_POST['password'];
@@ -14,7 +13,7 @@
 	}
 	else if(login_m($user, $password)==1)
 	{
-		$_SESSION['username']=$user;
+		set_session($user);
 		echo "1";
 	}
 ?>

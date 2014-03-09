@@ -1,6 +1,6 @@
 
 <?php
-	
+session_start();	
 	include_once("util.php");
 	
 	function repeticiones($usuario){
@@ -94,6 +94,14 @@
 			echo '-1';
 		}
 	}
-
-
+	function set_session($user){
+		$_session['username']=$user;
+	}
+	function get_session(){
+		if (isset($_SESSION['$username']))
+		{
+			echo $user;
+		}
+		else echo "-1";
+	}
 ?>

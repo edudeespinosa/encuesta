@@ -1,8 +1,9 @@
 <?php 
 	session_start(); 
-	include("../index.php");
-	if(!$_SESSION['username']){
-		header('Location: ../index.php');
+	include("../modelo.php");
+	if(get_session()!=-1)
+	{
+		echo get_session();
 	}
 
 
