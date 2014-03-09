@@ -104,11 +104,11 @@
 						resultado+="<p class=\"pares\">";
 						resultado+=mmm[i]+"</p>";
 					}
-					resultado+="</div>";
-
+					resultado+="</div><div class=\"navigation\" style=\"display:none;\"></div>";
+					$(".aux").html("Tus respuestas finales:");
 					//alert(todo[1]);
 					$("#main").flippy({
-					    color_target: "#FDFDFD",
+					    color_target: "#27677C",
 					    duration: "900",
 					    direction: "LEFT",
 					    verso: resultado

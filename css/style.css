@@ -187,6 +187,9 @@ li.sexo{
 	width: 49%;
 	display: inline-block;
 	height: 100%;
+	text-align: right;
+	padding-right: 20px;
+	padding-top: 20px;
 }
 .final_answers{
 	width: 49%;
@@ -198,4 +201,6 @@ li.sexo{
 	background: #59B80C;
 	background: #0C3E4E;
 	color: white;
+	display: inline-block;
+	padding-top: 20px;
 }

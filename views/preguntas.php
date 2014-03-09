@@ -31,7 +31,7 @@
 </header>
 <body>
 	<div class="content">
-		<h1>Pregunta <span id="tituloPregunta"></span></h1>
+		<h1 class="aux">Pregunta <span id="tituloPregunta"></span></h1>
 		<div class="wrapper">
 			<div class="container" id="main">
 				<div class="question" id="ques">
