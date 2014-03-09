@@ -136,32 +136,16 @@
 		var parametros = {
 			"numPregunta" : pregunta
 		};
-		$("#pregunta").flippy({
-		    color_target: "#FDFDFD",
-		    duration: "100",
-		    direction: "LEFT",
-		    depth: .05,
-		    verso: "Procesando, espere por favor"
-		});
-		$("#respuesta").flippy({
-		    color_target: "#0C3E4E",
-		    duration: "100",
-		    light: 0,
-		    depth: .05,
-		    direction: "RIGHT",
-		    verso: ""
-		});
 		$.ajax({
 			data: parametros,
 			url: '../controller/print_questions.php',
 			//url: "/encuesta/controller/print_questions.php",
 			type: 'post',
-			beforeSend: function(){
 				$(".navigation").fadeOut("slow");
 			},
 			success: function (response){
 				todo = response.split(":");
-				$("#pregunta").flippyReverse({
+				$("#pregunta").flippy({
 				    color_target: "#FDFDFD",
 				    duration: "900",
 				    direction: "LEFT",
@@ -187,7 +171,7 @@
 				html_respuestas+="</ul>";
 				//$("#respuesta").html (html_respuestas);
 				var navegacion = "";
-				$("#respuesta").flippyReverse({
+				$("#respuesta").flippy({
 				    direction: "RIGHT",
 				    light: 0,
 				    color_target: "#0C3E4E",
@@ -215,6 +199,22 @@
 	}
 	$(document).ready(function(){
 		imprime_pregunta(1);
+		$("#pregunta").flippy({
+		    color_target: "#FDFDFD",
+		    duration: "900",
+		    direction: "LEFT",
+		    depth: .05,
+		    verso: "Procesando, espere por favor"
+		});
+		$("#respuesta").flippy({
+		    color_target: "#0C3E4E",
+		    duration: "900",
+		    light: 0,
+		    depth: .05,
+		    direction: "RIGHT",
+		    verso: ""
+		});
+
 		$("#tituloPregunta").html("1");
 		//$(".alerts").fadeOut("slow");
 		$("#query").val(1);
