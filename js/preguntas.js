@@ -21,7 +21,8 @@
 		};
 		$.ajax({
 			data: parametros,
-			url: "../controller/print_questions.php",
+			url: "<?php echo base_url()?>/controller/print_questions.php",
+			//url: "<?php echo base_url()?>index.php/pedidos/registrar_pedido5/"+idProveedor,
 			type: 'post',
 			beforeSend: function(){
 				$("#pregunta").flippy({
