@@ -15,7 +15,9 @@
 		<meta charset="UTF-8">
 		<title>Principal</title>
 	    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-		<script type="text/javascript" src="../js/main.js"></script>
+		<script type="text/javascript" src="../js/main.js"></script>	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+
 		<link rel="stylesheet" href="../css/style.css">
 	</head>
 	<header>
