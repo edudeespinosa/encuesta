@@ -82,7 +82,7 @@
 		};
 		$.ajax({
 			data: parametros,
-+			url: '../controller/print_questions.php',
+			url: '../controller/print_questions.php',
 			//url: "/encuesta/controller/print_questions.php",
 			type: 'post',
 			beforeSend: function(){
