@@ -90,7 +90,7 @@
 			//$ins = "INSERT INTO usuario (usuario,contrsn,email,sexo,fecha_nac) VALUES \"".$user."\", \"".$password."\", \"".$mail."\", \"".$sexo."\", \"".$fecha."\"";
 			$ins = "INSERT INTO usuario (usuario,email,contrsn,sexo,fecha_nac) VALUES (\"".$user."\", \"".$mail."\", \"".$password."\", \"".$sexo."\", \"".$fecha."\")";
 			$results = runquery($ins, $mysql);
-			login_m($user,$password);
+			//login_m($user,$password);
 		}
 		else
 		{
