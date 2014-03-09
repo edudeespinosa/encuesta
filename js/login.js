@@ -45,6 +45,9 @@ function login(usr, psswd)
 			{
 				window.location.href = "./views/main.php";
 			}
+			else{
+				$("#verificaciones").html("<p style='width: 100%; border: 1px red;'>Error interno. Intentélo más tarde</p>");
+			}
 		}
 	});
 }

@@ -15,5 +15,6 @@
 	else if(login_m($user, $password)==1)
 	{
 		$_SESSION['username']=$user;
+		echo "1";
 	}
 ?>
