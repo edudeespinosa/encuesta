@@ -206,7 +206,7 @@
 		    duration: "900",
 		    direction: "LEFT",
 		    depth: .05,
-		    verso: "Procesando, espere por favor"
+		    verso: ""
 		});
 		$("#respuesta").flippy({
 		    color_target: "#0C3E4E",
