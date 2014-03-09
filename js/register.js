@@ -69,7 +69,7 @@ function checkForm(form)
 				}
 				else if(response==1)
 				{
-					window.location.href = "./views/main.php";
+					window.location.href = "../views/main.php";
 				}
 			}
 		});
