@@ -206,7 +206,7 @@
 		    duration: "900",
 		    direction: "LEFT",
 		    depth: .05,
-		    verso: ""
+		    verso: "Procesando, espere por favor"
 		});
 		$("#respuesta").flippy({
 		    color_target: "#0C3E4E",
@@ -216,6 +216,9 @@
 		    direction: "RIGHT",
 		    verso: ""
 		});
+		$("#pregunta").flippyReverse();
+$("#respuesta").flippyReverse();
+
 	}
 	$(document).ready(function(){
 		imprime_pregunta(1);
