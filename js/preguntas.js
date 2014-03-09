@@ -56,13 +56,7 @@
 				url: '../controller/controllerInsert.php',
 				type: 'post',
 				beforeSend: function(){
-					$("#pregunta").flippy({
-					    color_target: "#FDFDFD",
-					    duration: "900",
-					    direction: "LEFT",
-					    depth: .05,
-					    verso: "Procesando, espere por favor"
-					});
+					//turn();
 				},
 				success: function(response){
 					alert(response);
