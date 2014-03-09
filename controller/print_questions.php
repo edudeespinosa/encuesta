@@ -22,7 +22,12 @@
 		//var_dump($res);
 		disconnect($mysql);
 		echo $res;
-
+//$results = getPregunta($pregunta);
+	$holi = $res[0].":";
+	foreach ($results[1] as $res2) {
+		$holi.=$res2.";";
+	} 
+	echo ($holi);
 
 /*	$results = getPregunta($pregunta);
 	$holi = $results[0].":";
