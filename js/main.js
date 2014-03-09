@@ -1,4 +1,4 @@
-function cerrar_session(event)
+function cerrar_sesion(event)
 {
 	event.preventDefault();
 	$.ajax({
