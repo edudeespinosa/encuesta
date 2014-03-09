@@ -1,19 +1,8 @@
 		var respuestas_guardadas=new Array(8);
 		for(i=0;i<8;i++){
 			respuestas_guardadas[i]=-1;
- 		}
-
-		function cerrar_sesion(event)
-		{
-			event.preventDefault();
-			$.ajax({
-				url: '../controller/controllerCloseSession.php',
-				type: 'post',
-				success: function (response){
-					window.location.href = "../index.php";
-				}
-			});
 		}
+
 		function next_question(){
 			numPregunta = Number($("#query").val());
 			flag=false;
@@ -24,10 +13,9 @@
 				}
 			}
 			if(flag)
-				imprime_pregunta(numPregunta+1);
+			imprime_pregunta(numPregunta+1);
 			else
 				alert("Contesta la pregunta antes de continuar");
-
 		}
 		function previous_question(){
 			numPregunta = Number($("#query").val());
@@ -75,18 +63,16 @@
 				}
 			});
 		}
-
 		function imprime_pregunta(pregunta){
 		var parametros = {
 			"numPregunta" : pregunta
 		};
 		$.ajax({
 			data: parametros,
-+			url: '../controller/print_questions.php',
-			//url: "/encuesta/controller/print_questions.php",
+			url: '../controller/print_questions.php',
 			type: 'post',
 			beforeSend: function(){
-				/*$("#pregunta").flippy({
+				$("#pregunta").flippy({
 				    color_target: "#FDFDFD",
 				    duration: "900",
 				    direction: "LEFT",
@@ -100,7 +86,7 @@
 				    depth: .05,
 				    direction: "RIGHT",
 				    verso: ""
-				});*/
+				});
 
 			},
 			success: function (response){
@@ -112,15 +98,13 @@
 				    verso: todo[0]
 				});
 
-				$("#pregunta").html(todo[0]);
+				//alert(response);
+				//$("#pregunta").html(todo[0]);
 				respuestas = todo[1].split(";");
-				//html_respuestas = "<ul class=\"list-unstyled options\"  >";
 				html_respuestas = "<form name=\"forma_r\"><ul class=\"list-unstyled options\"  >";
-				
 				for (var i = 0; i < respuestas.length-1; i++) {
 					html_respuestas += "<li class=\"radio\" style=\"margin: "+getMargin(respuestas.length-1)+"% auto\"><label for=\"option";
 					html_respuestas += i;
-					//html_respuestas +="\">"+respuestas[i]+"<input type=\"radio\" name=\"optionsRadio\" value=\"option"+i+"\" id=\"option"+i+"\"></label></li>";
 					html_respuestas +="\">"+respuestas[i]+"<input type=\"radio\" name=\"optionsRadio\" value=\""+i+"\" id=\"option\"";
 					if(respuestas_guardadas[pregunta-1]==i){
 						html_respuestas += " checked";
@@ -138,7 +122,6 @@
 				    duration: "900",
 				    verso: html_respuestas
 				});
-				$("#respuesta").html (html_respuestas);
 				if(pregunta < 8)
 				{
 					navegacion += "<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"next\" onclick=\"next_question();\">Siguiente</button>";
