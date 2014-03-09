@@ -47,8 +47,8 @@
 					</ul-->
 				</div>
 				<div class="navigation">
-				<div class="alerts"></div>
 				</div>
+				<div class="alerts"></div>
 			</div>
 		</div>
 	</div></body>
