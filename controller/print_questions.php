@@ -8,6 +8,21 @@
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
+  		$queryP="SELECT texto FROM preguntas WHERE id=".$pregunta;
+		$queryR="SELECT texto FROM respuesta WHERE id_pregunta=".$pregunta;
+		$resP=$mysql->query($queryP);
+		$resR=$mysql->query($queryR);
+		$resP=mysqli_fetch_array($resP);
+		$respuestas=array();
+
+		while ($row=mysqli_fetch_array($resR,MYSQLI_BOTH)){
+			array_push($respuestas, $row['texto']);
+		}
+		$res=array($resP['texto'],$respuestas);
+		//var_dump($res);
+		disconnect($mysql);
+		echo $res;
+
 
 /*	$results = getPregunta($pregunta);
 	$holi = $results[0].":";
