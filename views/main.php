@@ -5,6 +5,9 @@
 	{
 		echo get_session();
 	}
+	else{
+		echo 'fail';
+	}
 
 
 ?>
