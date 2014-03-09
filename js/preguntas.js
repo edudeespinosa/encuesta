@@ -26,7 +26,7 @@
 			if(flag){
 				imprime_pregunta(numPregunta+1);
 				$(".alerts").fadeOut("slow");
-				$(".alerts").html("");
+				//$(".alerts").html("");
 			}
 			else{
 				$(".alerts").html("Contesta la pregunta antes de continuar");
@@ -36,7 +36,7 @@
 		}
 		function previous_question(){
 			$(".alerts").fadeOut("slow");
-			$(".alerts").html("");
+			//$(".alerts").html("");
 			numPregunta = Number($("#query").val());
 			flag=false;
 			for(i=0;i<document.forma_r.optionsRadio.length;i++){
