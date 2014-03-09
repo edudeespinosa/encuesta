@@ -177,3 +177,24 @@ li.sexo{
 	vertical-align: bottom;
 	margin-top: 20px;
 }
+
+.wut{
+	width: 100%;
+}
+
+.final_questions{
+	background: #FDFDFD;
+	width: 49%;
+	display: inline-block;
+	height: 100%;
+}
+.final_answers{
+	width: 49%;
+	vertical-align: top;
+	height: 100%;
+	padding-left: 24px;
+	background: #9DF2C7;
+	background: #64AA2B;
+	background: #59B80C;
+	background: #0C3E4E;
+}
