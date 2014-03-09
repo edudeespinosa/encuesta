@@ -145,18 +145,16 @@
 				$("#pregunta").flippy({
 				    color_target: "#FDFDFD",
 				    duration: "900",
-				    direction: "LEFT",
-				    depth: .05,
-				    verso: "Procesando, espere por favor"
+				    direction: "LEFT"
 				});
+				$("#pregunta").html("Procesando, espere por favor");
 				$("#respuesta").flippy({
 				    color_target: "#0C3E4E",
 				    duration: "900",
 				    light: 0,
-				    depth: .05,
-				    direction: "RIGHT",
-				    verso: ""
+				    direction: "RIGHT"
 				});
+				$("#pregunta").html("");
 				$(".navigation").fadeIn("slow");
 			},
 			success: function (response){
