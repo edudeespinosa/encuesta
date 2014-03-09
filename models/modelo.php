@@ -95,14 +95,5 @@
 			echo '-1';
 		}
 	}
-	function set_session($user){
-		$_SESSION['username']=$user;
-	}
-	function get_session(){
-		if (isset($_SESSION['$username']))
-		{
-			return $_SESSION['$username'];
-		}
-		else return "-1";
-	}
+	
 ?>
