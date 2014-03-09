@@ -141,6 +141,8 @@
 			url: '../controller/print_questions.php',
 			//url: "/encuesta/controller/print_questions.php",
 			type: 'post',
+			beforeSend: function(){
+
 				$(".navigation").fadeOut("slow");
 			},
 			success: function (response){
@@ -197,8 +199,8 @@
 			}
 		});
 	}
-	$(document).ready(function(){
-		imprime_pregunta(1);
+
+	function turn(){
 		$("#pregunta").flippy({
 		    color_target: "#FDFDFD",
 		    duration: "900",
@@ -214,6 +216,10 @@
 		    direction: "RIGHT",
 		    verso: ""
 		});
+	}
+	$(document).ready(function(){
+		imprime_pregunta(1);
+		turn();
 
 		$("#tituloPregunta").html("1");
 		//$(".alerts").fadeOut("slow");
