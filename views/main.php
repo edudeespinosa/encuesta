@@ -29,7 +29,7 @@
 				?>
 				
 			</div>
-			<div id="goodbye"><a href="<?php unset( $_SESSION['username'] )?>">Log out</a></div>
+			<div id="goodbye"><a href="">Log out</a></div>
 		</div>
 	</header>
 	<body>
