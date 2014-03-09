@@ -47,7 +47,7 @@
 				});
 
 			},
-			error: function(response){
+			complete: function(response){
 				alert(response);
 			},
 			success: function (response){
