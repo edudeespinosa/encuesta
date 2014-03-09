@@ -26,7 +26,7 @@
 		};
 		$.ajax({
 			data: parametros,
-			url_2: url+"encuesta/controller/print_questions.php",
+			url: "/encuesta/controller/print_questions.php",
 			//"<?php echo base_url() ?>index.php/graphs/totales_prepa_qro",
 			type: 'post',
 			beforeSend: function(){
