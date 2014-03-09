@@ -30,7 +30,7 @@
 				?>
 				
 			</div>
-			<div id="goodbye"><a href="" onclick="cerrar_sesion();">Log out</a></div>
+			<div id="goodbye"><a href="" onclick="cerrar_sesion(event);">Log out</a></div>
 		</div>
 	</header>
 	<body>
