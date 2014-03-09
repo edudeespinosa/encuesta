@@ -30,7 +30,7 @@
 			//"<?php echo base_url() ?>index.php/graphs/totales_prepa_qro",
 			type: 'post',
 			beforeSend: function(){
-				$("#pregunta").flippy({
+				/*$("#pregunta").flippy({
 				    color_target: "#FDFDFD",
 				    duration: "900",
 				    direction: "LEFT",
@@ -44,11 +44,10 @@
 				    depth: .05,
 				    direction: "RIGHT",
 				    verso: ""
-				});
+				});*/
 
 			},
 			complete: function(response){
-				alert(response);
 			},
 			success: function (response){
 				todo = response.split(":");
