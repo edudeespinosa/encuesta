@@ -35,6 +35,7 @@
 		<div class="wrapper">
 			<div class="container" id="main">
 				<div class="question" id="ques">
+					<div id="alerts"></div>
 					<div id="pregunta">
 					</div>
 				</div>

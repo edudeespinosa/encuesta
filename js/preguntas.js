@@ -23,10 +23,13 @@
 					flag=true;
 				}
 			}
-			if(flag)
+			if(flag){
 				imprime_pregunta(numPregunta+1);
-			else
-				alert("Contesta la pregunta antes de continuar");
+				$("#alerts").html("");
+			}
+			else{
+				$("#alerts").html("Contesta la pregunta antes de continuar");
+			}
 
 		}
 		function previous_question(){
