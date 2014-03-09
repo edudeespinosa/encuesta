@@ -15,6 +15,7 @@
 		<meta charset="UTF-8">
 		<title>Principal</title>
 	    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<script type="text/javascript" src="../js/main.js"></script>
 		<link rel="stylesheet" href="../css/style.css">
 	</head>
 	<header>
@@ -29,7 +30,7 @@
 				?>
 				
 			</div>
-			<div id="goodbye"><a href="">Log out</a></div>
+			<div id="goodbye"><a href="" onclick="cerrar_sesion();">Log out</a></div>
 		</div>
 	</header>
 	<body>
