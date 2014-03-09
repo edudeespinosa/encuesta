@@ -216,9 +216,9 @@
 	$(document).ready(function(){
 		imprime_pregunta(1);
 		$("#tituloPregunta").html("1");
-		$(".alerts").fadeOut("slow");
+		//$(".alerts").fadeOut("slow");
 		$("#query").val(1);
-		$(".navigation").fadeOut("slow");
+		//$(".navigation").fadeOut("slow");
 
 	});
 
