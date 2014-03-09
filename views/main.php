@@ -1,4 +1,3 @@
-<!doctype html>
 <?php 
 	session_start(); 
 	include("../models/modelo.php");
@@ -10,6 +9,7 @@
 		echo 'fail';
 	}
 ?>
+<!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">

@@ -100,7 +100,7 @@ session_start();
 	function get_session(){
 		if (isset($_SESSION['$username']))
 		{
-			echo $user;
+			echo $_SESSION['$username'];
 		}
 		else echo "-1";
 	}
