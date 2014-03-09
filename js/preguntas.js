@@ -29,7 +29,7 @@
 				$(".alerts").fadeOut("slow");
 			}
 			else{
-				$("#alerts").html("Contesta la pregunta antes de continuar");
+				$(".alerts").html("Contesta la pregunta antes de continuar");
 				$(".alerts").fadeIn("slow");
 			}
 
