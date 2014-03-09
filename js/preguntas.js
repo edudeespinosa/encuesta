@@ -136,27 +136,27 @@
 		var parametros = {
 			"numPregunta" : pregunta
 		};
+		$("#pregunta").flippy({
+		    color_target: "#FDFDFD",
+		    duration: "900",
+		    direction: "LEFT",
+		    depth: .05,
+		    verso: "Procesando, espere por favor"
+		});
+		$("#respuesta").flippy({
+		    color_target: "#0C3E4E",
+		    duration: "900",
+		    light: 0,
+		    depth: .05,
+		    direction: "RIGHT",
+		    verso: ""
+		});
 		$.ajax({
 			data: parametros,
 			url: '../controller/print_questions.php',
 			//url: "/encuesta/controller/print_questions.php",
 			type: 'post',
 			beforeSend: function(){
-				$("#pregunta").flippy({
-				    color_target: "#FDFDFD",
-				    duration: "900",
-				    direction: "LEFT",
-				    depth: .05,
-				    verso: "Procesando, espere por favor"
-				});
-				$("#respuesta").flippy({
-				    color_target: "#0C3E4E",
-				    duration: "900",
-				    light: 0,
-				    depth: .05,
-				    direction: "RIGHT",
-				    verso: ""
-				});
 				$(".navigation").fadeOut("slow");
 			},
 			success: function (response){
