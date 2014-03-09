@@ -51,7 +51,7 @@ function checkForm(form)
 		};
 		$.ajax({
 			data: parametros,
-			url: '../controller/controllerRegister.php',
+			url: '/encuesta/controller/controllerRegister.php',
 			type: 'post',
 			success: function (response){
 				console.log(response);
