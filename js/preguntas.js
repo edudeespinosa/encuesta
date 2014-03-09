@@ -161,7 +161,7 @@
 			},
 			success: function (response){
 				todo = response.split(":");
-				$("#pregunta").flippy({
+				$("#pregunta").flippyReverse({
 				    color_target: "#FDFDFD",
 				    duration: "900",
 				    direction: "LEFT",
@@ -187,7 +187,7 @@
 				html_respuestas+="</ul>";
 				//$("#respuesta").html (html_respuestas);
 				var navegacion = "";
-				$("#respuesta").flippy({
+				$("#respuesta").flippyReverse({
 				    direction: "RIGHT",
 				    light: 0,
 				    color_target: "#0C3E4E",
