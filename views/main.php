@@ -1,7 +1,7 @@
 <?php session_start()?>
 <?php 
 	include("../models/modelo.php");
-	if(get_session()!=-1)
+	if(!isset($_SESSION['username']))
 	{
 		echo get_session();
 	}
