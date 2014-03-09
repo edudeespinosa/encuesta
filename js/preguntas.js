@@ -147,7 +147,7 @@
 			},
 			success: function (response){
 				todo = response.split(":");
-				turn();
+				//turn();
 				$("#pregunta").flippy({
 				    color_target: "#FDFDFD",
 				    duration: "900",
