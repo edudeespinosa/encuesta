@@ -23,7 +23,7 @@
 			if($_SESSION['username'])
 				echo "<div id='user'>".$_SESSION['username']."</div>";
 			else { 
-				//header('Location: ../index.php');
+				header('Location: ../index.php');
 			} ?>
 		</div>
 		<div id="goodbye"><a href="" onclick="cerrar_sesion(event)">Log out</a></div>
