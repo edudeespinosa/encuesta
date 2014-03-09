@@ -70,9 +70,11 @@
 				if($password == $rows['contrsn'])
 				{
 					//MANDAR A HOME
-					session_destroy();
+					//session_destroy();
 					//session_start();
-					set_session($usuario);
+					//set_session($usuario);
+					$_SESSION['username'] = $usuario;
+
 					return 1;
 				}
 				else
@@ -125,15 +127,15 @@
 		}
 		else echo "-1";
 	}
-		function getUsuario($nombre){
-			$mysql=connect();
+	function getUsuario($nombre){
+		$mysql=connect();
 
-			$query="SELECT id FROM usuario WHERE usuario='".$nombre."'";
-			$res=$mysql->query($query);
-			$res=mysqli_fetch_array($res);
+		$query="SELECT id FROM usuario WHERE usuario='".$nombre."'";
+		$res=$mysql->query($query);
+		$res=mysqli_fetch_array($res);
 
-			disconnect($mysql);
-			return $res['id'];
+		disconnect($mysql);
+		return $res['id'];
 	}
 
 	function guardarRespuestas($query){
