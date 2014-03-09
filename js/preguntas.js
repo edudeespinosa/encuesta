@@ -99,7 +99,8 @@
 					    direction: "LEFT",
 					    verso: todo
 					});
-					navegacion="<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"finalfinal\" onclick=\"laluigi();\" style=\"float: right\">Confirmar Respuestas</button>";
+					navegacion="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"previous_question();\">Anterior</button>";
+					navegacion+="<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"finalfinal\" onclick=\"laluigi();\" style=\"float: right\">Confirmar Respuestas</button>";
 					$(".navigation").html(navegacion);
 					$(".navigation").fadeIn("slow");
 				}
