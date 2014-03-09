@@ -23,7 +23,7 @@
 			data: parametros,
 			url: "/encuesta/controller/print_questions.php",
 			//url: "<?php echo base_url()?>index.php/pedidos/registrar_pedido5/"+idProveedor,
-			type: 'post',
+			type: 'get',
 			beforeSend: function(){
 				$("#pregunta").flippy({
 				    color_target: "#FDFDFD",
