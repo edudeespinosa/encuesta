@@ -1,6 +1,6 @@
 <?php 
-	//if(!isset($_SESSION))
-		session_start()
+	if(!isset($_SESSION))
+		session_start();
 	function connect(){
 		$mysql = mysqli_connect("localhost","root","C0d1ng4fUn","preguntas_salud");
 		$mysql->set_charset('utf8');
