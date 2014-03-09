@@ -16,13 +16,18 @@
 			else return 2;
 		}
 		function imprime_pregunta(pregunta){
+		pathArray = window.location.href.split( '/' );
+		protocol = pathArray[0];
+		host = pathArray[2];
+		url_2 = protocol + '://' + host;
+
 		var parametros = {
 			"numPregunta" : pregunta
 		};
 		$.ajax({
 			data: parametros,
-			url: "/encuesta/controller/print_questions.php",
-			//url: "<?php echo base_url()?>index.php/pedidos/registrar_pedido5/"+idProveedor,
+			url_2: url+"encuesta/controller/print_questions.php",
+			//"<?php echo base_url() ?>index.php/graphs/totales_prepa_qro",
 			type: 'post',
 			beforeSend: function(){
 				$("#pregunta").flippy({
