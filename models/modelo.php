@@ -50,12 +50,9 @@
 				if($password == $rows['contrsn'])
 				{
 					//MANDAR A HOME
-					session_start();
 					//session_destroy();
 					//session_start();
-
-					$_SESSION['username']=$usuario;
-					echo "1";
+					return 1;
 				}
 				else
 				{

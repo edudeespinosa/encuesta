@@ -1,4 +1,4 @@
-<?php 
+<?php session_start();
 
 	include_once("../models/modelo.php");
 	$user = $_POST['user'];
@@ -12,8 +12,8 @@
 	{
 		echo "-2";
 	}
-	else
+	else if(login_m($user, $password)==1)
 	{
-		login_m($user, $password);
+		$_SESSION['username']=$user;
 	}
 ?>
