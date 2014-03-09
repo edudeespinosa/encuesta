@@ -157,6 +157,7 @@
 				    direction: "RIGHT",
 				    verso: ""
 				});
+				$(".navigation").fadeIn("slow");
 
 			},
 			success: function (response){
@@ -207,6 +208,7 @@
 				}
 
 				$(".navigation").html(navegacion);
+				$(".navigation").fadeIn("slow");
 				$("#query").val(pregunta);
 				$("#tituloPregunta").html(pregunta);
 			}
@@ -217,4 +219,7 @@
 		$("#tituloPregunta").html("1");
 		$(".alerts").fadeOut("slow");
 		$("#query").val(1);
+		$(".navigation").fadeOut("slow");
+
 	});
+
