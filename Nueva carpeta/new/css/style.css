@@ -1,0 +1,171 @@
+html, body{
+	background: #31B2B2;
+	background: #2A363B;
+	color: #2A363B;
+}
+header{
+	height: 70px;
+	background: #F2EEED;
+	font-size: 1.5em;
+	line-height: 3em;
+}
+
+.container{
+	width: 100%;
+	background: #27677C;
+	margin-top: 150px;
+	padding: 50px;
+	padding-bottom: 90px;
+}
+
+.container div{
+    margin: 0 auto;
+}
+
+.wrapper{
+	max-width: 1280px;
+    margin: 0 auto;
+}
+h1{
+	text-align: center;
+	color: white;
+}
+#user{
+	display: inline-block;
+}
+#goodbye{
+	float: right;
+}
+
+.bienvenida{
+	float: left;
+}
+
+.content{
+
+}
+.not-repeated, .repeated{
+	height: auto;
+	text-align: center;
+	margin: 20px auto;
+}
+
+#main{
+	height: 500px;
+}
+
+#main>div{
+	display: inline-block;
+}
+
+.question{
+	width: 60%;
+	height: 100%;
+}
+
+.question div{
+	display: block;
+	text-align: center;
+	line-height: 12.9;
+	margin: 0 auto;
+	display: block;
+	font-size: 2em;
+}
+
+.answer{
+	width: 38%;
+	vertical-align: top;
+	height: 100%;
+	padding-left: 24px;
+	background: #9DF2C7;
+	background: #64AA2B;
+	background: #59B80C;
+	background: #0C3E4E;
+
+}
+
+.options li{
+	display: block;
+	margin: 14% auto;
+	font-size: 1.6em;
+	line-height: 0.8em;
+	color: #FDFDFD;
+}
+
+.navigation{
+	width: 98.5%;
+	padding-top: 20px;
+}
+
+#prev,#next, #final{
+	width: 165px;
+	height: 42px;
+	float: right;
+}
+
+#prev{
+	margin-right: 36px;
+}
+
+#Main
+{
+	background-color: #FDFDFD;
+	border-radius:15px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	position: absolute;
+	top: 50%; /* Buscamos el centro horizontal (relativo) del navegador */
+	left: 50%; /* Buscamos el centro vertical (relativo) del navegador */
+	width: 300px; /* Definimos el ancho del objeto a centrar */
+	height: 250px; /* Definimos el alto del objeto a centrar */
+	margin-top: -120px; /* Restamos la mitad de la altura del objeto con un margin-top */
+	margin-left: -150px; /* Restamos la mitad de la anchura del objeto con un margin-left */
+
+}
+
+#registro
+{
+	background-color: #FDFDFD;
+	border-radius:15px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	position: absolute;
+	top: 50%; /* Buscamos el centro horizontal (relativo) del navegador */
+	left: 50%; /* Buscamos el centro vertical (relativo) del navegador */
+	width: 500px; /* Definimos el ancho del objeto a centrar */
+	height: auto; /* Definimos el alto del objeto a centrar */
+	margin-top: -170px; /* Restamos la mitad de la altura del objeto con un margin-top */
+	margin-left: -250px; /* Restamos la mitad de la anchura del objeto con un margin-left */
+	padding-bottom: 20px;
+}
+form label
+{
+	color: #2A363B;
+	font-family: arial black;
+	font-size: large;
+
+}
+
+input[type=submit]
+{
+   border-top: 1px;
+   padding: 5.5px 11px;
+   border-radius: 11px;  
+   color: #2A363B;
+   font-size: 14px;
+   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+}
+
+
+
+li.sexo{
+	display: inline-block;
+}
+
+.radio label{
+	color: #FDFDFD;
+}

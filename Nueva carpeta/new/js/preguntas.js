@@ -68,7 +68,6 @@
 				}
 			});
 		}
-
 		function get_results(){
 			var parametros = {
 				"respuestas" : respuestas_guardadas
@@ -135,7 +134,7 @@
 			//url: "/encuesta/controller/print_questions.php",
 			type: 'post',
 			beforeSend: function(){
-				/*$("#pregunta").flippy({
+				$("#pregunta").flippy({
 				    color_target: "#FDFDFD",
 				    duration: "900",
 				    direction: "LEFT",
@@ -149,7 +148,7 @@
 				    depth: .05,
 				    direction: "RIGHT",
 				    verso: ""
-				});*/
+				});
 
 			},
 			success: function (response){

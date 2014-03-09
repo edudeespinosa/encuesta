@@ -1,20 +1,11 @@
 <?php 
-	if(!isset($_SESSION))
-		session_start()
-?>
-<?php 
 
-	include_once("../models/modelo.php");
+	include_once("modelo.php");
 
 	if(isset($_POST['register']))
 	{
 		register();
 	}
-	if(isset($_POST['register_new']))
-	{
-		register_new();
-	}
-
 	if(isset($_POST['login']))
 	{
 		login();
@@ -30,28 +21,24 @@
 			login_m($usuario,$password);
 		}
 	}
-	function register_new()
-	{
-		header('Location: ../views/register.php');
 
-	}
 	function register()
 	{
 		$user = $_POST['user'];
 		$password = $_POST['password'];
 		$repassword = $_POST['repassword'];
 		$mail = $_POST['mail'];
-		//$sexo = $_POST['sexo'];
+		$sexo = $_POST['sexo'];
 		$fecha = $_POST['fecha'];
 			if($user == "" || $password == "" || $repassword == "" || $mail == "" || $sexo == "" || $fecha == "")
 			{
-				echo "-3";
+				echo "favor de llenar campos";
 			}	
 			else
 			{
 				if($password != $repassword)
 				{
-					echo "-2";
+					echo "passwords doesn't match";
 				}
 				else
 				{

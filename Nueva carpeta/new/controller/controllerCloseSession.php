@@ -1,6 +1,7 @@
-<?php
+<?php 
 	if(!isset($_SESSION))
 		session_start()
+?><?php
 	if(isset($_SESSION['username']))
 	{
 		unset($_SESSION['username']);

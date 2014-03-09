@@ -2,7 +2,6 @@
 	if(!isset($_SESSION))
 		session_start()
 ?>
-
 <?php
 	include_once("util.php");
 	
@@ -21,6 +20,7 @@
 
 		disconnect($mysql);
 	}
+
 		function getRespuesta($numR){
 		$mysql=connect();
 
@@ -73,9 +73,11 @@
 				if($password == $rows['contrsn'])
 				{
 					//MANDAR A HOME
-					session_destroy();
+					//session_destroy();
 					//session_start();
-					set_session($usuario);
+					//set_session($usuario);
+					$_SESSION['username'] = $usuario;
+
 					return 1;
 				}
 				else
@@ -119,6 +121,11 @@
 		}
 	}
 	function set_session($user){
+		if(isset($_SESSION['username']))
+		{
+			unset($_SESSION['username']);
+		}
+
 		$_SESSION['username']=$user;
 	}
 	function get_session(){
@@ -128,7 +135,8 @@
 		}
 		else echo "-1";
 	}
-		function getUsuario($nombre){
+
+	function getUsuario($nombre){
 			$mysql=connect();
 
 			$query="SELECT id FROM usuario WHERE usuario='".$nombre."'";

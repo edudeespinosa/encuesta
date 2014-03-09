@@ -1,12 +1,7 @@
-<?php 
-	if(!isset($_SESSION))
-		session_start()
-?>
 <?php
-	function connect(){
-		$mysql = mysqli_connect("localhost","root","C0d1ng4fUn","preguntas_salud");
-		$mysql->set_charset('utf8');
-
+	function connect($server,$user,$password,$db){
+		$mysql = mysqli_connect($server,$user,$password,$db);
+		//$db = mysql_select_db($databse);
 		return $mysql;
 	}
 
@@ -18,10 +13,8 @@
 		$res=$mysql->query($query);
 		if($res){
 			$mensaje='El registro ha sido actualizado';
-			echo "1";
 		}else{
 			$mensaje='Ha ocurrido un error y el registro no ha podido actualizarse';
-			echo "-4";
 		}
 		return $mensaje;
 	}

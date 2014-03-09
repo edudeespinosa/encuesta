@@ -1,7 +1,5 @@
-<?php 
-	if(!isset($_SESSION))
-		session_start()
-?><!doctype html>
+<?php session_start(); ?>
+<!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
