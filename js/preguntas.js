@@ -147,6 +147,7 @@
 			},
 			success: function (response){
 				todo = response.split(":");
+				turn();
 				$("#pregunta").flippy({
 				    color_target: "#FDFDFD",
 				    duration: "900",
@@ -154,7 +155,7 @@
 				    verso: todo[0]
 				});
 
-				$("#pregunta").html(todo[0]);
+				//$("#pregunta").html(todo[0]);
 				respuestas = todo[1].split(";");
 				//html_respuestas = "<ul class=\"list-unstyled options\"  >";
 				html_respuestas = "<form name=\"forma_r\"><ul class=\"list-unstyled options\"  >";
@@ -171,7 +172,7 @@
 					html_respuestas += "></label></li></form>";
 				}
 				html_respuestas+="</ul>";
-				$("#respuesta").html (html_respuestas);
+				//$("#respuesta").html (html_respuestas);
 				var navegacion = "";
 				$("#respuesta").flippy({
 				    direction: "RIGHT",
@@ -216,13 +217,10 @@
 		    direction: "RIGHT",
 		    verso: ""
 		});
-		$("#pregunta").flippyReverse();
-$("#respuesta").flippyReverse();
-
 	}
 	$(document).ready(function(){
 		imprime_pregunta(1);
-		turn();
+		//turn();
 
 		$("#tituloPregunta").html("1");
 		//$(".alerts").fadeOut("slow");
