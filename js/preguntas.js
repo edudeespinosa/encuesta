@@ -87,17 +87,24 @@
 					//$(".navigation").html("");
 					//alert(response);
 					todo=response.split(";");
+					string resultado = "<div class=\"wut\">";
 					mmm=new Array();
-					for(i=0;i<8;i++){
+					for(i=0;i<16;i++){
 						//p=getPregunta(i+1);
 						mmm[i]=todo[i];
+						if(i%2==0)
+							resultado+="<p class=\"pares\">";
+						else
+							resultado+="<p class=\"impares\">";
+						resultado+=mmm[i]+"</p>";
 					}
+					resultado+="</div>";
 					//alert(todo[1]);
 					$("#pregunta").flippy({
 					    color_target: "#FDFDFD",
 					    duration: "900",
 					    direction: "LEFT",
-					    verso: todo
+					    verso: resultado
 					});
 					navegacion="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"previous_question();\">Anterior</button>";
 					navegacion+="<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"finalfinal\" onclick=\"laluigi();\" style=\"float: right\">Confirmar Respuestas</button>";
