@@ -96,7 +96,6 @@
 						resultado+=mmm[i]+"</p>";
 					}
 					resultado +="</div>";
-					resultado += "<div class=\"wut\"><div class=\"final_answers\">";
 					mmm=new Array();
 					for(i=0;i<8;i++){
 						//p=getPregunta(i+1);
