@@ -1,6 +1,7 @@
+<!doctype html>
 <?php 
 	session_start(); 
-	include("../modelo.php");
+	include("../models/modelo.php");
 	if(get_session()!=-1)
 	{
 		echo get_session();
@@ -8,10 +9,7 @@
 	else{
 		echo 'fail';
 	}
-
-
 ?>
-<!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
