@@ -57,7 +57,7 @@
 				}
 				else
 				{
-					echo "error de password";
+					return -4;
 				}
 
 			}	

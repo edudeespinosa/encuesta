@@ -1,14 +1,4 @@
 <?php session_start()?>
-<?php 
-	include("../models/modelo.php");
-	if(isset($_SESSION['username']))
-	{
-		echo $_SESSION['username'];
-	}
-	else{
-		echo 'fail';
-	}
-?>
 <!doctype html>
 <html lang="en">
 	<head>
@@ -28,6 +18,7 @@
 				if($_SESSION['username'])
 					echo "<div id='user'>".$_SESSION['username']."</div>";
 				else {
+					header('Location: ../index.php');
 				} 
 				?>
 				

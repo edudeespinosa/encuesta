@@ -15,4 +15,5 @@
 	{
 		echo "1";
 	}
+	else echo login_m($user, $password);
 ?>

@@ -39,7 +39,7 @@ function login(usr, psswd)
 				$("#verificaciones").html("<p style='width: 100%; border: 1px red;'>Llena todos los campos</p>");
 			}
 			else if(response==-4){
-				$("#verificaciones").html("<p style='width: 100%; border: 1px red;'>Error interno. Intentélo más tarde</p>");
+				$("#verificaciones").html("<p style='width: 100%; border: 1px red;'>Contraseña incorrect</p>");
 			}
 			else if(response==1)
 			{

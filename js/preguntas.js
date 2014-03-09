@@ -1,3 +1,14 @@
+		function cerrar_sesion(event)
+		{
+			event.preventDefault();
+			$.ajax({
+				url: '../controller/controllerCloseSession.php',
+				type: 'post',
+				success: function (response){
+					window.location.href = "../index.php";
+				}
+			});
+		}
 		function next_question(){
 			numPregunta = Number($("#query").val());
 			imprime_pregunta(numPregunta+1);

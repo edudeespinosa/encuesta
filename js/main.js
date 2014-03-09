@@ -5,7 +5,7 @@ function cerrar_sesion(event)
 		url: '../controller/controllerCloseSession.php',
 		type: 'post',
 		success: function (response){
-			window.location.href = "./index.php";
+			window.location.href = "../index.php";
 		}
 	});
 }
