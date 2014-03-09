@@ -13,7 +13,6 @@
 	}
 	else if(login_m($user, $password)==1)
 	{
-		set_session($user);
 		echo "1";
 	}
 ?>
