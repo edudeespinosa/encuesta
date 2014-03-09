@@ -1,5 +1,5 @@
+<?php session_start()?>
 <?php 
-	session_start(); 
 	include("../models/modelo.php");
 	if(get_session()!=-1)
 	{
@@ -22,7 +22,6 @@
 		<div class="bienvenida">
 			Bienvenido
 			<?php
-			session_start();
 			if($_SESSION['username'])
 				echo "<div id='user'>".$_SESSION['username']."</div>";
 			else { 
