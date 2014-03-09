@@ -57,6 +57,7 @@
 				type: 'post',
 				beforeSend: function(){
 					//turn();
+					$(".navigation").fadeOut("slow");
 				},
 				success: function(response){
 					alert(response);
@@ -80,7 +81,7 @@
 				type: 'post',
 				beforeSend: function(){
 					//turn();
-
+				$(".navigation").fadeOut("slow");
 			},
 				success: function(response){
 					//$(".navigation").html("");
@@ -100,6 +101,7 @@
 					});
 					navegacion="<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"finalfinal\" onclick=\"laluigi();\" style=\"float: right\">Confirmar Respuestas</button>";
 					$(".navigation").html(navegacion);
+					$(".navigation").fadeIn("slow");
 				}
 			});
 		}
@@ -122,7 +124,6 @@
 			//url: "/encuesta/controller/print_questions.php",
 			type: 'post',
 			beforeSend: function(){
-
 				$(".navigation").fadeOut("slow");
 			},
 			success: function (response){
