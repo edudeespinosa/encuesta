@@ -7,8 +7,7 @@
 	if($user == "")
 	{
 		echo "-1";
-	}	
-	else if($password =="")
+	}	else if($password =="")
 	{
 		echo "-2";
 	}

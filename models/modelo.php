@@ -100,8 +100,8 @@
 	function get_session(){
 		if (isset($_SESSION['$username']))
 		{
-			echo $_SESSION['$username'];
+			return $_SESSION['$username'];
 		}
-		else echo "-1";
+		else return "-1";
 	}
 ?>
