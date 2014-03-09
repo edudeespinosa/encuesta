@@ -51,7 +51,8 @@
 				{
 					//MANDAR A HOME
 					//session_destroy();
-					//session_start();
+					session_start();
+					set_session($usuario)
 					return 1;
 				}
 				else
