@@ -35,7 +35,6 @@
 		<div class="wrapper">
 			<div class="container" id="main">
 				<div class="question" id="ques">
-					<div id="alerts"></div>
 					<div id="pregunta">
 					</div>
 				</div>
@@ -47,6 +46,7 @@
 						<li class="radio"><label for="option4">Opción 4<input type="radio" name="optionsRadio" value="option4" id="option4"></label></li>
 					</ul-->
 				</div>
+				<div id="alerts"></div>
 				<div class="navigation">
 				</div>
 			</div>
