@@ -1,4 +1,12 @@
-<?php session_start(); ?>
+<?php 
+	session_start(); 
+	include("../index.php");
+	if(!$_SESSION['username']){
+		header('Location: ../index.php');
+	}
+
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,7 +24,6 @@
 			if($_SESSION['username'])
 				echo "<div id='user'>".$_SESSION['username']."</div>";
 			else { 
-				header('Location: ../index.php');
 			} 
 			?>
 			
