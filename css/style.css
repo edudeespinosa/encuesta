@@ -93,7 +93,8 @@ h1{
 }
 
 .navigation{
-	width: 98.5%;
+	float: right;
+	margin-left: 10px;
 	padding-top: 20px;
 }
 
@@ -168,4 +169,12 @@ li.sexo{
 
 .radio label{
 	color: #FDFDFD;
+}
+.alerts{
+	float: right;
+	width: auto;
+	background: white;
+	padding: 11px;
+	vertical-align: bottom;
+	margin-top: 20px;
 }

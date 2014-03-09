@@ -46,8 +46,8 @@
 						<li class="radio"><label for="option4">Opción 4<input type="radio" name="optionsRadio" value="option4" id="option4"></label></li>
 					</ul-->
 				</div>
-				<div id="alerts"></div>
 				<div class="navigation">
+				<div class="alerts"></div>
 				</div>
 			</div>
 		</div>

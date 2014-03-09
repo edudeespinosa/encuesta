@@ -25,10 +25,12 @@
 			}
 			if(flag){
 				imprime_pregunta(numPregunta+1);
-				$("#alerts").html("");
+				$(".alerts").html("");
+				$(".alerts").fadeOut("slow");
 			}
 			else{
 				$("#alerts").html("Contesta la pregunta antes de continuar");
+				$(".alerts").fadeIn("slow");
 			}
 
 		}
@@ -211,5 +213,6 @@
 	$(document).ready(function(){
 		imprime_pregunta(1);
 		$("#tituloPregunta").html("1");
+		$(".alerts").fadeOut("slow");
 		$("#query").val(1);
 	});
