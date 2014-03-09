@@ -157,7 +157,7 @@
 				    direction: "RIGHT",
 				    verso: ""
 				});*/
-				$(".navigation").fadeIn("slow");
+				$(".navigation").fadeOut("slow");
 			},
 			success: function (response){
 				todo = response.split(":");
