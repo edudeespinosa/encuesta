@@ -60,7 +60,7 @@
 				});
 
 				//alert(response);
-				//$("#pregunta").html(todo[0]);
+				$("#pregunta").html(todo[0]);
 				respuestas = todo[1].split(";");
 				html_respuestas = "<ul class=\"list-unstyled options\"  >";
 				for (var i = 0; i < respuestas.length-1; i++) {
@@ -69,7 +69,6 @@
 					html_respuestas +="\">"+respuestas[i]+"<input type=\"radio\" name=\"optionsRadio\" value=\"option"+i+"\" id=\"option"+i+"\"></label></li>";
 				}
 				html_respuestas+="</ul>";
-				//$("#respuesta").html (html_respuestas);
 				var navegacion = "";
 				$("#respuesta").flippy({
 				    direction: "RIGHT",
@@ -78,6 +77,7 @@
 				    duration: "900",
 				    verso: html_respuestas
 				});
+				$("#respuesta").html (html_respuestas);
 				if(pregunta < 8)
 				{
 					navegacion += "<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"next\" onclick=\"next_question();\">Siguiente</button>";
