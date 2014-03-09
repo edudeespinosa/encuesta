@@ -21,8 +21,8 @@
 
 	function getPregunta($numP){
 		$mysql=connect();
-		echo $mysql;
-		/*$queryP="SELECT texto FROM preguntas WHERE id=".$numP;
+
+		$queryP="SELECT texto FROM preguntas WHERE id=".$numP;
 		$queryR="SELECT texto FROM respuesta WHERE id_pregunta=".$numP;
 		$resP=$mysql->query($queryP);
 		$resR=$mysql->query($queryR);
@@ -34,7 +34,6 @@
 		}
 		$res=array($resP['texto'],$respuestas);
 		//var_dump($res);
-		//echo $res;*/
 		disconnect($mysql);
 		return $res;
 	}

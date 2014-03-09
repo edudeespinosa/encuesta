@@ -1,8 +1,6 @@
 <?php
 	function connect(){
 		$mysql = mysqli_connect("localhost","root","C0d1ng4fUn","preguntas_salud");
-		echo $mysql;
-		
 		$mysql->set_charset('utf8');
 
 		return $mysql;
