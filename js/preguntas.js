@@ -95,8 +95,8 @@
 						resultado+="<p class=\"pares\">";
 						resultado+=mmm[i]+"</p>";
 					}
-					resultado+="</div>";
-					resultado = "<div class=\"wut\"><div class=\"final_answers\">";
+					resultado +="</div>";
+					resultado += "<div class=\"wut\"><div class=\"final_answers\">";
 					mmm=new Array();
 					for(i=0;i<8;i++){
 						//p=getPregunta(i+1);
@@ -107,7 +107,7 @@
 					resultado+="</div>";
 
 					//alert(todo[1]);
-					$("#pregunta").flippy({
+					$("#main").flippy({
 					    color_target: "#FDFDFD",
 					    duration: "900",
 					    direction: "LEFT",
