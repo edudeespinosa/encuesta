@@ -158,7 +158,6 @@
 				    verso: ""
 				});
 				$(".navigation").fadeIn("slow");
-
 			},
 			success: function (response){
 				todo = response.split(":");
