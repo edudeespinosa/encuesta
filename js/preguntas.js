@@ -21,7 +21,7 @@
 		};
 		$.ajax({
 			data: parametros,
-			url: '../controller/print_questions.php',
+			url: '<?php echo site_url(\'/controller/print_questions.php\')?>',
 			type: 'post',
 			beforeSend: function(){
 				$("#pregunta").flippy({
