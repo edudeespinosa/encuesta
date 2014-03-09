@@ -104,7 +104,7 @@
 						resultado+="<p class=\"pares\">";
 						resultado+=mmm[i]+"</p>";
 					}
-					resultado+="</div><div class=\"navigation\" style=\"display:none;\"></div>";
+					resultado+="</div></div><div class=\"navigation\"></div>";
 					$(".aux").html("Tus respuestas finales:");
 					//alert(todo[1]);
 					$("#main").flippy({
