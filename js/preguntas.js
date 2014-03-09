@@ -142,19 +142,21 @@
 			//url: "/encuesta/controller/print_questions.php",
 			type: 'post',
 			beforeSend: function(){
-				$("#pregunta").flippy({
+				/*$("#pregunta").flippy({
 				    color_target: "#FDFDFD",
 				    duration: "900",
-				    direction: "LEFT"
+				    direction: "LEFT",
+				    depth: .05,
+				    verso: "Procesando, espere por favor"
 				});
-				$("#pregunta").html("Procesando, espere por favor");
 				$("#respuesta").flippy({
 				    color_target: "#0C3E4E",
 				    duration: "900",
 				    light: 0,
-				    direction: "RIGHT"
-				});
-				$("#pregunta").html("");
+				    depth: .05,
+				    direction: "RIGHT",
+				    verso: ""
+				});*/
 				$(".navigation").fadeIn("slow");
 			},
 			success: function (response){
