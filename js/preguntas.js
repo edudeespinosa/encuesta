@@ -44,7 +44,7 @@
 			},
 			failure: function(response){
 				alert(response);
-			}
+			},
 			success: function (response){
 				todo = response.split(":");
 				$("#pregunta").flippy({
