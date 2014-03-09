@@ -34,6 +34,7 @@
 		}
 		$res=array($resP['texto'],$respuestas);
 		//var_dump($res);
+		echo $res;
 		disconnect($mysql);
 		return $res;
 	}
