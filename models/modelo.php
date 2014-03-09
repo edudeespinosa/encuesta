@@ -52,7 +52,7 @@
 					//MANDAR A HOME
 					session_destroy();
 					session_start();
-					$_session['username']=$usuario;
+					set_session($usuario);
 					return 1;
 				}
 				else
@@ -96,7 +96,7 @@
 		}
 	}
 	function set_session($user){
-		$_session['username']=$user;
+		$_SESSION['username']=$user;
 	}
 	function get_session(){
 		if (isset($_SESSION['$username']))
