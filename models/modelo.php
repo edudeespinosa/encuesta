@@ -2,7 +2,7 @@
 
 <?php
 	include_once("util.php");
-	include_once("../controller/controllerSession.php");
+	
 	function repeticiones($usuario){
 		$mysql=connect();
 
@@ -50,9 +50,8 @@
 				if($password == $rows['contrsn'])
 				{
 					//MANDAR A HOME
-					session_destroy();
-					session_start();
-					set_session($usuario);
+					//session_destroy();
+					//session_start();
 					return 1;
 				}
 				else
@@ -95,5 +94,14 @@
 			echo '-1';
 		}
 	}
-	
+	function set_session($user){
+		$_session['username']=$user;
+	}
+	function get_session(){
+		if (isset($_SESSION['$username']))
+		{
+			echo $_SESSION['$username'];
+		}
+		else echo "-1";
+	}
 ?>
