@@ -3,7 +3,7 @@
 	include("../models/modelo.php");
 	if(!isset($_SESSION['username']))
 	{
-		echo get_session();
+		echo $_SESSION['username'];
 	}
 	else{
 		echo 'fail';
