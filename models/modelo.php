@@ -2,7 +2,7 @@
 
 <?php
 	include_once("util.php");
-	
+	include_once("../controller/controllerSession.php");
 	function repeticiones($usuario){
 		$mysql=connect();
 
