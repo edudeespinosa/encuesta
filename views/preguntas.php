@@ -35,7 +35,8 @@
 		<div class="wrapper">
 			<div class="container" id="main">
 				<div class="question" id="ques">
-					<div id="pregunta">
+					<div>
+						<p id="pregunta"></p>
 					</div>
 				</div>
 				<div class="answer" id="respuesta">
