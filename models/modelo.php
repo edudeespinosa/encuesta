@@ -138,7 +138,7 @@
 		return $res['id'];
 	}
 
-	function guardarRespuestas($query){
+	function guardarRespuestas($usuario, $numR,$resR){
 		$mysql=connect();
 		$query="INSERT INTO respuesta_us VALUES (".$usuario.",".$numR.",".$resR.")";
 		$query1="UPDATE usuario SET repeticiones=".$resR." WHERE id=".$usuario;
