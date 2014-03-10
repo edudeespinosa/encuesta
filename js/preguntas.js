@@ -64,7 +64,7 @@
 				},
 				success: function(response){
 					//alert(response);
-					$("#pregunta").flippy({
+					$("#main").flippy({
 					    color_target: "#FDFDFD",
 					    duration: "900",
 					    direction: "LEFT",
