@@ -69,70 +69,65 @@
 		});
 	}
 
-	function get_results(){
-		numPregunta = Number($("#query").val());
-		flag=false;
-		for(i=0;i<document.forma_r.optionsRadio.length;i++){
-			if(document.forma_r.optionsRadio[i].checked){
-				respuestas_guardadas[numPregunta-1]=document.forma_r.optionsRadio[i].value;
-				flag=true;
+		function get_results(){
+			numPregunta = Number($("#query").val());
+			flag=false;
+			for(i=0;i<document.forma_r.optionsRadio.length;i++){
+				if(document.forma_r.optionsRadio[i].checked){
+					respuestas_guardadas[numPregunta-1]=document.forma_r.optionsRadio[i].value;
+					flag=true;
+				}
 			}
-		}
-		if(!flag)
-			alert("Contesta la pregunta antes de continuar");
-		else{
-		console.log(respuestas_guardadas);
-
-		var parametros = {
-			"respuestas" : respuestas_guardadas
-		};
-		$.ajax({
-			data: parametros,
-			url: '../controller/print_questions.php',
-			type: 'post',
-			beforeSend: function(){
-				//turn();
-			$(".navigation").fadeOut("slow");
-		},
-			success: function(response){
-				//$(".navigation").html("");
-				//alert(response);
-				todo=response.split(";");
-				resultado = "<div class=\"wut\"><div class=\"final_questions\">";
-				mmm=new Array();
-				for(i=0;i<8;i++){
-					//p=getPregunta(i+1);
-					mmm[i]=todo[(i*2)];
-					resultado+="<p class=\"pares\">";
-					resultado+=mmm[i]+"</p>";
-				}
-				resultado +="</div>";
-				mmm=new Array();
-				resultado += "<div class=\"final_answers\">";
-				for(i=0;i<8;i++){
-					//p=getPregunta(i+1);
-					mmm[i]=todo[(i*2)+1];
-					resultado+="<p class=\"pares\">";
-					resultado+=mmm[i]+"</p>";
-				}
-				resultado+="</div>";
-				//resultado+="</div></div><div class=\"navigation\"></div>";
-				$(".aux").html("Tus respuestas finales:");
-				//alert(todo[1]);
-				navegacion="<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"finalfinal\" onclick=\"laluigi();\" style=\"float: right\">Confirmar Respuestas</button>";
-				navegacion+="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"previous_question();\">Anterior</button>";
-				$(".navigation").html(navegacion);
-				$(".navigation").fadeIn("slow");
-				resultado+=$(".navigation").html();
-				$("#main").flippy({
-				    color_target: "#27677C",
+			if(!flag)
+				alert("Contesta la pregunta antes de continuar");
+			else{
+			console.log(respuestas_guardadas);
+			var parametros = {
+				"respuestas" : respuestas_guardadas
+			};
+			$.ajax({
+				data: parametros,
+				url: '../controller/print_questions.php',
+				type: 'post',
+				beforeSend: function(){
+				$("#pregunta").flippy({
+				    color_target: "#FDFDFD",
 				    duration: "900",
 				    direction: "LEFT",
-				    verso: resultado
+				    depth: .05,
+				    verso: "Procesando, espere por favor"
 				});
-			}
-		});
-	}
+				$("#respuesta").flippy({
+				    color_target: "#0C3E4E",
+				    duration: "900",
+				    light: 0,
+				    depth: .05,
+				    direction: "RIGHT",
+				    verso: ""
+				});
+
+			},
+				success: function(response){
+					//$(".navigation").html("");
+					//alert(response);
+					todo=response.split(";");
+					mmm=new Array();
+					for(i=0;i<8;i++){
+						//p=getPregunta(i+1);
+						mmm[i]=todo[i];
+					}
+					//alert(todo[1]);
+					$("#pregunta").flippy({
+					    color_target: "#FDFDFD",
+					    duration: "900",
+					    direction: "LEFT",
+					    verso: todo
+					});
+					navegacion="<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"finalfinal\" onclick=\"laluigi();\" style=\"float: right\">Confirmar Respuestas</button>";
+					$(".navigation").html(navegacion);
+				}
+			});}
+		}
 	function getMargin(numero){
 		return 100/numero;
 		/*if(numero<=5)
