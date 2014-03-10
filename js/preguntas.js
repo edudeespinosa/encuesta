@@ -152,7 +152,7 @@
 			else return 2;*/
 		}
 		function imprime_pregunta(pregunta){
-			html_todo = "<div class=\"question\" id=\"ques\"><div id=\"pregunta\"><p id=\"testo\"></p></div></div>";
+			html_todo = "<div class=\"question\" id=\"ques\"><div id=\"pregunta\" style=\"background:rgb(253, 253, 253); overflow: hidden;\"><p id=\"testo\"></p></div></div>";
 			html_todo += "<div class=\"answer\" id=\"respuesta\"></div>";
 			html_todo += "<div class=\"navigation\" style=\"display:none;\"></div>";
 			html_todo += "<div class=\"alerts\" style=\"display: none;\"></div>";
