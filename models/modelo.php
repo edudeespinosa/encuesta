@@ -148,7 +148,7 @@
 		return $res;
 	}
 
-	function retro($usuario){
+	function retro($usuario,$resR){
 		$mysql=connect();
 		$query="SELECT id_respuesta FROM respuesta_us WHERE id_usuario=".$usuario." AND repeticion=".$resR;
 		$res=$mysql->query($query);
