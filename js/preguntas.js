@@ -157,6 +157,7 @@
 			html_todo += "<div class=\"navigation\" style=\"display:none;\"></div>";
 			html_todo += "<div class=\"alerts\" style=\"display: none;\"></div>";
 			$("#main").html(html_todo);
+			turn();
 		var parametros = {
 			"numPregunta" : pregunta
 		};
