@@ -40,14 +40,7 @@
 			html_todo += "<div class=\"answer\" id=\"respuesta\"></div>";
 			html_todo += "<div class=\"navigation\" style=\"display:none;\"></div>";
 			html_todo += "<div class=\"alerts\" style=\"display: none;\"></div>";
-			//$("#main").html(html_todo);
-			$("#main").flippy({
-					    color_target: "#FDFDFD",
-					    duration: "900",
-					    direction: "LEFT",
-					    verso: html_todo
-					});
-			
+			$("#main").html(html_todo);
 			imprime_pregunta(8);
 		}
 		function previous_question(){
