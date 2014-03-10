@@ -161,7 +161,7 @@
 				html_respuestas = "<form name=\"forma_r\" class='responda'><ul class=\"list-unstyled options\"  >";
 				
 				for (var i = 0; i < respuestas.length-1; i++) {
-					html_respuestas += "<li class=\"radio\" style=\"height: "+getMargin(respuestas.length-1)+"% auto\"><label for=\"option";
+					html_respuestas += "<li class=\"radio\" style=\"height: "+getMargin(respuestas.length-1)+"%\"><label for=\"option";
 					html_respuestas += i;
 					//html_respuestas +="\">"+respuestas[i]+"<input type=\"radio\" name=\"optionsRadio\" value=\"option"+i+"\" id=\"option"+i+"\"></label></li>";
 					html_respuestas +="\">"+respuestas[i]+"<input type=\"radio\" name=\"optionsRadio\" value=\""+i+"\" id=\"option\"";
