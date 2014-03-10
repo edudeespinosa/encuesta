@@ -57,10 +57,9 @@
 				type: 'post',
 				beforeSend: function(){
 					//turn();
-					$(".navigation").fadeOut("slow");
 				},
 				success: function(response){
-					alert(response);
+					//alert(response);
 					$("#pregunta").flippy({
 					    color_target: "#FDFDFD",
 					    duration: "900",
