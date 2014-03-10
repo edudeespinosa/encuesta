@@ -146,7 +146,7 @@
 			success: function (response){
 				todo = response.split(":");
 				//turn();
-				question_text = "<p id='testo'>todo[0]</p>"
+				question_text = "<p id='testo'>"+todo[0]+"</p>"
 				$("#pregunta").flippy({
 				    color_target: "#FDFDFD",
 				    duration: "900",
