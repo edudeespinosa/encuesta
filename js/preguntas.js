@@ -108,8 +108,8 @@
 					//resultado+="</div></div><div class=\"navigation\"></div>";
 					$(".aux").html("Tus respuestas finales:");
 					//alert(todo[1]);
-					navegacion="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"previous_question();\">Anterior</button>";
 					navegacion+="<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"finalfinal\" onclick=\"laluigi();\" style=\"float: right\">Confirmar Respuestas</button>";
+					navegacion="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"previous_question();\">Anterior</button>";
 					$(".navigation").html(navegacion);
 					$(".navigation").fadeIn("slow");
 					resultado+=$(".navigation").html();
@@ -124,11 +124,11 @@
 		}
 		function getMargin(numero){
 			if(numero<=5)
-				return 11;
+				return 8;
 			else if(numero<9)
-				return 9;
+				return 6;
 			else if(numero<12)
-				return 4;
+				return 2;
 			else return 2;
 		}
 		function imprime_pregunta(pregunta){

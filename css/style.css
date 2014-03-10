@@ -2,12 +2,13 @@ html, body{
 	background: #31B2B2;
 	background: #2A363B;
 	color: #2A363B;
+	height: 100%;
 }
 header{
-	height: 70px;
+	height: 10%;
 	background: #F2EEED;
 	font-size: 1.5em;
-	line-height: 3em;
+	line-height: 5em;
 }
 
 .container{
@@ -23,6 +24,7 @@ header{
 
 .wrapper{
 	max-width: 1280px;
+	height: 50%;
     margin: 0 auto;
 }
 h1{
@@ -41,7 +43,7 @@ h1{
 }
 
 .content{
-
+	height: 88%;
 }
 .not-repeated, .repeated{
 	height: auto;
@@ -51,6 +53,7 @@ h1{
 
 #main{
 	height: 500px;
+	height: 100%;
 }
 
 #main>div{
@@ -65,10 +68,11 @@ h1{
 .question div{
 	display: block;
 	text-align: center;
-	line-height: 12.9;
+	line-height: 10;
 	margin: 0 auto;
 	display: block;
 	font-size: 2em;
+	height: 100%;
 }
 
 .answer{
@@ -97,7 +101,7 @@ h1{
 	padding-top: 20px;
 }
 
-#prev,#next, #final{
+#prev, #next, #final, #finalfinal{
 	width: 165px;
 	height: 42px;
 	float: right;
