@@ -162,5 +162,6 @@
 			array_push($retro, $res1['comentario']);
 		}
 		disconnect($mysql);
+		return $retro;
 	}
 ?>

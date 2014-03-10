@@ -127,7 +127,7 @@
 						$(".aux").html("Tus respuestas finales:");
 						//alert(todo[1]);
 						navegacion="<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"finalfinal\" onclick=\"laluigi();\" style=\"float: right\">Confirmar Respuestas</button>";
-						navegacion+="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"previous_question();\">Anterior</button>";
+						navegacion+="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"regresar();\">Anterior</button>";
 						$(".navigation").html(navegacion);
 						$(".navigation").fadeIn("slow");
 						resultado+=$(".navigation").html();
