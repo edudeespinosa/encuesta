@@ -27,7 +27,12 @@
 				imprime_pregunta(numPregunta+1);
 			else
 				alert("Contesta la pregunta antes de continuar");
+			console.log(respuestas_guardadas);
 
+		}
+		function regresar(){
+			console.log(respuestas_guardadas);
+			imprime_pregunta(8);
 		}
 		function previous_question(){
 			numPregunta = Number($("#query").val());
@@ -69,6 +74,18 @@
 			});
 		}
 		function get_results(){
+			numPregunta = Number($("#query").val());
+			flag=false;
+			for(i=0;i<document.forma_r.optionsRadio.length;i++){
+				if(document.forma_r.optionsRadio[i].checked){
+					respuestas_guardadas[numPregunta-1]=document.forma_r.optionsRadio[i].value;
+					flag=true;
+				}
+			}
+			if(!flag)
+				alert("Contesta la pregunta antes de continuar");
+			else{
+			console.log(respuestas_guardadas);
 			var parametros = {
 				"respuestas" : respuestas_guardadas
 			};
@@ -113,7 +130,7 @@
 					navegacion="<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"finalfinal\" onclick=\"laluigi();\" style=\"float: right\">Confirmar Respuestas</button>";
 					$(".navigation").html(navegacion);
 				}
-			});
+			});}
 		}
 		function getMargin(numero){
 			if(numero<=5)

@@ -35,9 +35,9 @@ function getConfirmacion($pr){
 			$numR=$arr[$i]+1;
 		}else{
 			$numR=$arr[$i]+1;
-			if($i==7){
+			/*if($i==7){
 				$numR+=$pr[$i];
-			}
+			}*/
 			for($j=$i-1;$j>=0;$j--){
 				$numR+=$pr[$j];
 			}

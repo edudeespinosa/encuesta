@@ -6,17 +6,14 @@
 	function repeticiones($usuario){
 		$mysql=connect();
 
-		$query="SELECT repeticiones FROM usuario WHERE usuario='".$usuario."'";
-		$res = mysql_query($query);
-		$rows = mysql_fetch_array($res,MYSQL_BOTH);
+		$mysql=connect();
 
-		if($rows['repeticiones']>0){
-			return true;
-		}else{
-			return false;
-		}
+		$query="SELECT repeticiones FROM usuario WHERE id=".$usuario;
+		$res = $mysql->query($query);
+		$rows = mysqli_fetch_array($res);
 
 		disconnect($mysql);
+
 	}
 		function getRespuesta($numR){
 		$mysql=connect();
@@ -140,6 +137,7 @@
 
 	function guardarRespuestas($usuario, $numR,$resR){
 		$mysql=connect();
+
 		$query="INSERT INTO respuesta_us VALUES (".$usuario.",".$numR.",".$resR.")";
 		$query1="UPDATE usuario SET repeticiones=".$resR." WHERE id=".$usuario;
 		$res=runquery($query,$mysql);
@@ -164,6 +162,5 @@
 			array_push($retro, $res1['comentario']);
 		}
 		disconnect($mysql);
-		return $retro;
 	}
 ?>

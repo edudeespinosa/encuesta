@@ -34,6 +34,10 @@
 			}
 
 		}
+		function regresar(){
+			console.log(respuestas_guardadas);
+			imprime_pregunta(8);
+		}
 		function previous_question(){
 			$(".alerts").fadeOut("slow");
 			//$(".alerts").html("");
@@ -71,6 +75,19 @@
 		}
 
 		function get_results(){
+			numPregunta = Number($("#query").val());
+			flag=false;
+			for(i=0;i<document.forma_r.optionsRadio.length;i++){
+				if(document.forma_r.optionsRadio[i].checked){
+					respuestas_guardadas[numPregunta-1]=document.forma_r.optionsRadio[i].value;
+					flag=true;
+				}
+			}
+			if(!flag)
+				alert("Contesta la pregunta antes de continuar");
+			else{
+			console.log(respuestas_guardadas);
+
 			var parametros = {
 				"respuestas" : respuestas_guardadas
 			};
