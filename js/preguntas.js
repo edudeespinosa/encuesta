@@ -1,154 +1,149 @@
-		var respuestas_guardadas=new Array(8);
-		for(i=0;i<8;i++){
-			respuestas_guardadas[i]=-1;
- 		}
-
-		function cerrar_sesion(event)
-		{
-			event.preventDefault();
-			$.ajax({
-				url: '../controller/controllerCloseSession.php',
-				type: 'post',
-				success: function (response){
-					window.location.href = "../index.php";
-				}
-			});
-		}
-		function next_question(){
-			numPregunta = Number($("#query").val());
-			flag=false;
-			for(i=0;i<document.forma_r.optionsRadio.length;i++){
-				if(document.forma_r.optionsRadio[i].checked){
-					respuestas_guardadas[numPregunta-1]=document.forma_r.optionsRadio[i].value;
-					flag=true;
-				}
+	function cerrar_sesion(event)
+	{
+		event.preventDefault();
+		$.ajax({
+			url: '../controller/controllerCloseSession.php',
+			type: 'post',
+			success: function (response){
+				window.location.href = "../index.php";
 			}
-			if(flag){
-				imprime_pregunta(numPregunta+1);
-				$(".alerts").fadeOut("slow");
-				//$(".alerts").html("");
+		});
+	}
+	function next_question(){
+		numPregunta = Number($("#query").val());
+		flag=false;
+		for(i=0;i<document.forma_r.optionsRadio.length;i++){
+			if(document.forma_r.optionsRadio[i].checked){
+				respuestas_guardadas[numPregunta-1]=document.forma_r.optionsRadio[i].value;
+				flag=true;
 			}
-			else{
-				$(".alerts").html("Contesta la pregunta antes de continuar");
-				$(".alerts").fadeIn("slow");
-			}
-
 		}
-		function regresar(){
-			console.log(respuestas_guardadas);
-			imprime_pregunta(8);
-		}
-		function previous_question(){
+		if(flag){
+			imprime_pregunta(numPregunta+1);
 			$(".alerts").fadeOut("slow");
 			//$(".alerts").html("");
-			numPregunta = Number($("#query").val());
-			flag=false;
-			for(i=0;i<document.forma_r.optionsRadio.length;i++){
-				if(document.forma_r.optionsRadio[i].checked){
-					respuestas_guardadas[numPregunta-1]=document.forma_r.optionsRadio[i].value;
-					flag = true;
-				}
-			}
-			imprime_pregunta(numPregunta-1);
 		}
-		function laluigi(){
-			var parametros = {
-				"respuestas" : respuestas_guardadas
-			};
-			$.ajax({
-				data: parametros,
-				url: '../controller/controllerInsert.php',
-				type: 'post',
-				beforeSend: function(){
-					//turn();
-				},
-				success: function(response){
-					//alert(response);
-					$("#pregunta").flippy({
-					    color_target: "#FDFDFD",
-					    duration: "900",
-					    direction: "LEFT",
-					    verso: response
-					});
-				}
-			});
+		else{
+			$(".alerts").html("Contesta la pregunta antes de continuar");
+			$(".alerts").fadeIn("slow");
 		}
 
-		function get_results(){
-			numPregunta = Number($("#query").val());
-			flag=false;
-			for(i=0;i<document.forma_r.optionsRadio.length;i++){
-				if(document.forma_r.optionsRadio[i].checked){
-					respuestas_guardadas[numPregunta-1]=document.forma_r.optionsRadio[i].value;
-					flag=true;
-				}
+	}
+	function regresar(){
+		console.log(respuestas_guardadas);
+		imprime_pregunta(8);
+	}
+	function previous_question(){
+		$(".alerts").fadeOut("slow");
+		//$(".alerts").html("");
+		numPregunta = Number($("#query").val());
+		flag=false;
+		for(i=0;i<document.forma_r.optionsRadio.length;i++){
+			if(document.forma_r.optionsRadio[i].checked){
+				respuestas_guardadas[numPregunta-1]=document.forma_r.optionsRadio[i].value;
+				flag = true;
 			}
-			if(!flag)
-				alert("Contesta la pregunta antes de continuar");
-			else{
-			console.log(respuestas_guardadas);
-
-			var parametros = {
-				"respuestas" : respuestas_guardadas
-			};
-			$.ajax({
-				data: parametros,
-				url: '../controller/print_questions.php',
-				type: 'post',
-				beforeSend: function(){
-					//turn();
-				$(".navigation").fadeOut("slow");
+		}
+		imprime_pregunta(numPregunta-1);
+	}
+	function laluigi(){
+		var parametros = {
+			"respuestas" : respuestas_guardadas
+		};
+		$.ajax({
+			data: parametros,
+			url: '../controller/controllerInsert.php',
+			type: 'post',
+			beforeSend: function(){
+				//turn();
 			},
-				success: function(response){
-					//$(".navigation").html("");
-					//alert(response);
-					todo=response.split(";");
-					resultado = "<div class=\"wut\"><div class=\"final_questions\">";
-					mmm=new Array();
-					for(i=0;i<8;i++){
-						//p=getPregunta(i+1);
-						mmm[i]=todo[(i*2)];
-						resultado+="<p class=\"pares\">";
-						resultado+=mmm[i]+"</p>";
-					}
-					resultado +="</div>";
-					mmm=new Array();
-					resultado += "<div class=\"final_answers\">";
-					for(i=0;i<8;i++){
-						//p=getPregunta(i+1);
-						mmm[i]=todo[(i*2)+1];
-						resultado+="<p class=\"pares\">";
-						resultado+=mmm[i]+"</p>";
-					}
-					resultado+="</div>";
-					//resultado+="</div></div><div class=\"navigation\"></div>";
-					$(".aux").html("Tus respuestas finales:");
-					//alert(todo[1]);
-					navegacion="<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"finalfinal\" onclick=\"laluigi();\" style=\"float: right\">Confirmar Respuestas</button>";
-					navegacion+="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"previous_question();\">Anterior</button>";
-					$(".navigation").html(navegacion);
-					$(".navigation").fadeIn("slow");
-					resultado+=$(".navigation").html();
-					$("#main").flippy({
-					    color_target: "#27677C",
-					    duration: "900",
-					    direction: "LEFT",
-					    verso: resultado
-					});
+			success: function(response){
+				//alert(response);
+				$("#pregunta").flippy({
+				    color_target: "#FDFDFD",
+				    duration: "900",
+				    direction: "LEFT",
+				    verso: response
+				});
+			}
+		});
+	}
+
+	function get_results(){
+		numPregunta = Number($("#query").val());
+		flag=false;
+		for(i=0;i<document.forma_r.optionsRadio.length;i++){
+			if(document.forma_r.optionsRadio[i].checked){
+				respuestas_guardadas[numPregunta-1]=document.forma_r.optionsRadio[i].value;
+				flag=true;
+			}
+		}
+		if(!flag)
+			alert("Contesta la pregunta antes de continuar");
+		else{
+		console.log(respuestas_guardadas);
+
+		var parametros = {
+			"respuestas" : respuestas_guardadas
+		};
+		$.ajax({
+			data: parametros,
+			url: '../controller/print_questions.php',
+			type: 'post',
+			beforeSend: function(){
+				//turn();
+			$(".navigation").fadeOut("slow");
+		},
+			success: function(response){
+				//$(".navigation").html("");
+				//alert(response);
+				todo=response.split(";");
+				resultado = "<div class=\"wut\"><div class=\"final_questions\">";
+				mmm=new Array();
+				for(i=0;i<8;i++){
+					//p=getPregunta(i+1);
+					mmm[i]=todo[(i*2)];
+					resultado+="<p class=\"pares\">";
+					resultado+=mmm[i]+"</p>";
 				}
-			});
-		}
-		function getMargin(numero){
-			return 100/numero;
-			/*if(numero<=5)
-				return 17;
-			else if(numero<9)
-				return 8;
-			else if(numero<12)
-				return 2;
-			else return 2;*/
-		}
-		function imprime_pregunta(pregunta){
+				resultado +="</div>";
+				mmm=new Array();
+				resultado += "<div class=\"final_answers\">";
+				for(i=0;i<8;i++){
+					//p=getPregunta(i+1);
+					mmm[i]=todo[(i*2)+1];
+					resultado+="<p class=\"pares\">";
+					resultado+=mmm[i]+"</p>";
+				}
+				resultado+="</div>";
+				//resultado+="</div></div><div class=\"navigation\"></div>";
+				$(".aux").html("Tus respuestas finales:");
+				//alert(todo[1]);
+				navegacion="<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"finalfinal\" onclick=\"laluigi();\" style=\"float: right\">Confirmar Respuestas</button>";
+				navegacion+="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"previous_question();\">Anterior</button>";
+				$(".navigation").html(navegacion);
+				$(".navigation").fadeIn("slow");
+				resultado+=$(".navigation").html();
+				$("#main").flippy({
+				    color_target: "#27677C",
+				    duration: "900",
+				    direction: "LEFT",
+				    verso: resultado
+				});
+			}
+		});
+	}
+	function getMargin(numero){
+		return 100/numero;
+		/*if(numero<=5)
+			return 17;
+		else if(numero<9)
+			return 8;
+		else if(numero<12)
+			return 2;
+		else return 2;*/
+	}
+	function imprime_pregunta(pregunta){
 		var parametros = {
 			"numPregunta" : pregunta
 		};
@@ -217,31 +212,36 @@
 		});
 	}
 
-	function turn(){
-		$("#pregunta").flippy({
-		    color_target: "#FDFDFD",
-		    duration: "900",
-		    direction: "LEFT",
-		    depth: .05,
-		    verso: "Procesando, espere por favor"
-		});
-		$("#respuesta").flippy({
-		    color_target: "#0C3E4E",
-		    duration: "900",
-		    light: 0,
-		    depth: .05,
-		    direction: "RIGHT",
-		    verso: ""
-		});
-	}
-	$(document).ready(function(){
-		imprime_pregunta(1);
-		//turn();
-
-		$("#tituloPregunta").html("1");
-		//$(".alerts").fadeOut("slow");
-		$("#query").val(1);
-		//$(".navigation").fadeOut("slow");
-
+function turn(){
+	$("#pregunta").flippy({
+	    color_target: "#FDFDFD",
+	    duration: "900",
+	    direction: "LEFT",
+	    depth: .05,
+	    verso: "Procesando, espere por favor"
 	});
+	$("#respuesta").flippy({
+	    color_target: "#0C3E4E",
+	    duration: "900",
+	    light: 0,
+	    depth: .05,
+	    direction: "RIGHT",
+	    verso: ""
+	});
+}
+$(document).ready(function(){
+	var respuestas_guardadas=new Array(8);
+	for(i=0;i<8;i++){
+		respuestas_guardadas[i]=-1;
+		}
+
+	imprime_pregunta(1);
+	//turn();
+
+	$("#tituloPregunta").html("1");
+	//$(".alerts").fadeOut("slow");
+	$("#query").val(1);
+	//$(".navigation").fadeOut("slow");
+
+});
 
