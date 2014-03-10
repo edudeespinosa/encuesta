@@ -6,13 +6,12 @@
 	function repeticiones($usuario){
 		$mysql=connect();
 
-		$mysql=connect();
-
 		$query="SELECT repeticiones FROM usuario WHERE id=".$usuario;
 		$res = $mysql->query($query);
 		$rows = mysqli_fetch_array($res);
 
 		disconnect($mysql);
+		return $rows['repeticiones'];
 
 	}
 		function getRespuesta($numR){
