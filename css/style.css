@@ -65,14 +65,18 @@ h1{
 	height: 100%;
 }
 
+.question div{
+	height: 100%;
+}
 .question p{
 	display: block;
 	text-align: center;
-	line-height: 10;
 	margin: 0 auto;
-	display: block;
 	font-size: 2em;
 	height: 100%;
+	position: absolute;
+	width: 100%;
+	top: 41%;
 }
 
 .answer{
