@@ -1,3 +1,7 @@
+	var respuestas_guardadas=new Array(8);
+	for(i=0;i<8;i++){
+		respuestas_guardadas[i]=-1;
+		}
 	function cerrar_sesion(event)
 	{
 		event.preventDefault();
@@ -225,10 +229,6 @@ function turn(){
 	});
 }
 $(document).ready(function(){
-	var respuestas_guardadas=new Array(8);
-	for(i=0;i<8;i++){
-		respuestas_guardadas[i]=-1;
-		}
 
 	imprime_pregunta(1);
 	//turn();
