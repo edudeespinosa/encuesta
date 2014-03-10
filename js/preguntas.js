@@ -108,8 +108,8 @@
 					//resultado+="</div></div><div class=\"navigation\"></div>";
 					$(".aux").html("Tus respuestas finales:");
 					//alert(todo[1]);
-					navegacion+="<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"finalfinal\" onclick=\"laluigi();\" style=\"float: right\">Confirmar Respuestas</button>";
-					navegacion="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"previous_question();\">Anterior</button>";
+					navegacion="<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"finalfinal\" onclick=\"laluigi();\" style=\"float: right\">Confirmar Respuestas</button>";
+					navegacion+="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"previous_question();\">Anterior</button>";
 					$(".navigation").html(navegacion);
 					$(".navigation").fadeIn("slow");
 					resultado+=$(".navigation").html();
@@ -124,9 +124,9 @@
 		}
 		function getMargin(numero){
 			if(numero<=5)
-				return 8;
+				return 17;
 			else if(numero<9)
-				return 6;
+				return 8;
 			else if(numero<12)
 				return 2;
 			else return 2;
@@ -157,7 +157,7 @@
 				//$("#pregunta").html(todo[0]);
 				respuestas = todo[1].split(";");
 				//html_respuestas = "<ul class=\"list-unstyled options\"  >";
-				html_respuestas = "<form name=\"forma_r\"><ul class=\"list-unstyled options\"  >";
+				html_respuestas = "<form name=\"forma_r\" class='responda'><ul class=\"list-unstyled options\"  >";
 				
 				for (var i = 0; i < respuestas.length-1; i++) {
 					html_respuestas += "<li class=\"radio\" style=\"margin: "+getMargin(respuestas.length-1)+"% auto\"><label for=\"option";

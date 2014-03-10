@@ -213,3 +213,10 @@ li.sexo{
 	display: inline-block;
 	padding-top: 20px;
 }
+
+.responda{
+	height: 87%;
+}
+ul.list-unstyled{
+	height: 100%;
+}
