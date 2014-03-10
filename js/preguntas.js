@@ -108,16 +108,17 @@
 					//resultado+="</div></div><div class=\"navigation\"></div>";
 					$(".aux").html("Tus respuestas finales:");
 					//alert(todo[1]);
+					navegacion="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"previous_question();\">Anterior</button>";
+					navegacion+="<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"finalfinal\" onclick=\"laluigi();\" style=\"float: right\">Confirmar Respuestas</button>";
+					$(".navigation").html(navegacion);
+					$(".navigation").fadeIn("slow");
+					resultado+=$(".navigation").html();
 					$("#main").flippy({
 					    color_target: "#27677C",
 					    duration: "900",
 					    direction: "LEFT",
 					    verso: resultado
 					});
-					navegacion="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"previous_question();\">Anterior</button>";
-					navegacion+="<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"finalfinal\" onclick=\"laluigi();\" style=\"float: right\">Confirmar Respuestas</button>";
-					$(".navigation").html(navegacion);
-					$(".navigation").fadeIn("slow");
 				}
 			});
 		}
