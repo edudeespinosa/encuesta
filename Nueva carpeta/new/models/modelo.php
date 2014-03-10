@@ -8,17 +8,18 @@
 	function repeticiones($usuario){
 		$mysql=connect();
 
-		$query="SELECT repeticiones FROM usuario WHERE usuario='".$usuario."'";
-		$res = mysql_query($query);
-		$rows = mysql_fetch_array($res,MYSQL_BOTH);
+		$query="SELECT repeticiones FROM usuario WHERE id=".$usuario;
+		$res = $mysql->query($query);
+		$rows = mysqli_fetch_array($res);
 
-		if($rows['repeticiones']>0){
+		/*if($rows['repeticiones']>0){
 			return true;
 		}else{
 			return false;
-		}
-
+		}*/
 		disconnect($mysql);
+		return $rows['repeticiones'];
+
 	}
 
 		function getRespuesta($numR){
@@ -147,19 +148,43 @@
 			return $res['id'];
 	}
 
-	function guardarRespuestas($query){
+	function guardarRespuestas($usuario, $numR,$resR){
 		$mysql=connect();
 
+		/*$queryR="SELECT repeticiones FROM usuario WHERE id=".$usuario;
+		$resR=$mysql->query($queryR);
+		$resR=mysqli_fetch_array($resR);*/
+		//$resR=repeticiones($usuario);
+		//$resR+=1;
+		//if($resR==1){
+			$query="INSERT INTO respuesta_us VALUES (".$usuario.",".$numR.",".$resR.")";
+		/*}else{
+			$query="UPDATE respuesta_us "
+		}*/
+		$query1="UPDATE usuario SET repeticiones=".$resR." WHERE id=".$usuario;
 		$res=runquery($query,$mysql);
+		$res1=runquery($query1,$mysql);
+		
+
+
+
+
+
+
+
+		/*$query1="UPDATE usuario SET repeticiones=(SELECT repeticiones FROM usuario where id=".$usuario.")+1 WHERE id=".$usuario;
+		$res1=runquery($query1,$mysql);*/
 
 		disconnect($mysql);
 		return $res;
 	}
 
-	function retro($usuario){
+	function retro($usuario,$resR){
 		$mysql=connect();
 
-		$query="SELECT id_respuesta FROM respuesta_us WHERE id_usuario=".$usuario;
+		//$resR=repeticiones($usuario);
+
+		$query="SELECT id_respuesta FROM respuesta_us WHERE id_usuario=".$usuario." AND repeticion=".$resR;
 		$res=$mysql->query($query);
 		$respuestas=array();
 		$retro=array();
@@ -178,7 +203,7 @@
 		}
 		disconnect($mysql);
 		//var_dump($retro);
-			var_dump($retro);
+			//var_dump($retro);
 		return $retro;
 	}
 ?>

@@ -67,6 +67,7 @@ h1{
 
 .question div{
 	height: 100%;
+	overflow: hidden;
 }
 .question p{
 	display: block;

@@ -58,7 +58,7 @@
 					});
 				},
 				success: function(response){
-					alert(response);
+					//alert(response);
 					$("#pregunta").flippy({
 					    color_target: "#FDFDFD",
 					    duration: "900",

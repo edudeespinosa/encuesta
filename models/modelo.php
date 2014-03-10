@@ -140,36 +140,30 @@
 
 	function guardarRespuestas($query){
 		$mysql=connect();
-
+		$query="INSERT INTO respuesta_us VALUES (".$usuario.",".$numR.",".$resR.")";
+		$query1="UPDATE usuario SET repeticiones=".$resR." WHERE id=".$usuario;
 		$res=runquery($query,$mysql);
-
+		$res1=runquery($query1,$mysql);
 		disconnect($mysql);
 		return $res;
 	}
 
 	function retro($usuario){
 		$mysql=connect();
-
-		$query="SELECT id_respuesta FROM respuesta_us WHERE id_usuario=".$usuario;
+		$query="SELECT id_respuesta FROM respuesta_us WHERE id_usuario=".$usuario." AND repeticion=".$resR;
 		$res=$mysql->query($query);
 		$respuestas=array();
 		$retro=array();
-		//$res=mysqli_fetch_array($res,MYSQLI_BOTH);
-
 		while($row=mysqli_fetch_array($res,MYSQLI_BOTH)){
 			array_push($respuestas, $row['id_respuesta']);
 		}
-		//var_dump($respuestas);
 		foreach ($respuestas as $r) {
-			# code...
 			$query1="SELECT comentario FROM respuesta WHERE id=".$r;
 			$res1=$mysql->query($query1);
 			$res1=mysqli_fetch_array($res1);
 			array_push($retro, $res1['comentario']);
 		}
 		disconnect($mysql);
-		//var_dump($retro);
-			var_dump($retro);
 		return $retro;
 	}
 ?>
