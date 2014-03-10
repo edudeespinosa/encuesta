@@ -123,13 +123,14 @@
 			});
 		}
 		function getMargin(numero){
-			if(numero<=5)
+			return 100/numero;
+			/*if(numero<=5)
 				return 17;
 			else if(numero<9)
 				return 8;
 			else if(numero<12)
 				return 2;
-			else return 2;
+			else return 2;*/
 		}
 		function imprime_pregunta(pregunta){
 		var parametros = {
@@ -160,7 +161,7 @@
 				html_respuestas = "<form name=\"forma_r\" class='responda'><ul class=\"list-unstyled options\"  >";
 				
 				for (var i = 0; i < respuestas.length-1; i++) {
-					html_respuestas += "<li class=\"radio\" style=\"margin: "+getMargin(respuestas.length-1)+"% auto\"><label for=\"option";
+					html_respuestas += "<li class=\"radio\" style=\"height: "+getMargin(respuestas.length-1)+"% auto\"><label for=\"option";
 					html_respuestas += i;
 					//html_respuestas +="\">"+respuestas[i]+"<input type=\"radio\" name=\"optionsRadio\" value=\"option"+i+"\" id=\"option"+i+"\"></label></li>";
 					html_respuestas +="\">"+respuestas[i]+"<input type=\"radio\" name=\"optionsRadio\" value=\""+i+"\" id=\"option\"";

@@ -93,7 +93,8 @@ h1{
 
 .options li{
 	display: block;
-	margin: 14% auto;
+	/*margin: 14% auto;*/
+	margin: 0;
 	font-size: 1.6em;
 	line-height: 0.8em;
 	color: #FDFDFD;
