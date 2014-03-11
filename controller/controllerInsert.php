@@ -7,7 +7,7 @@ include_once("../models/modelo.php");
 
 if(isset($_POST['respuestas'])){
 	$pr=numeroRespuesta();
-	$holi = "?".guardarEncuesta($pr);
+	$holi = "*".guardarEncuesta($pr);
 	echo $holi;
 	//retroalimentacion(19);
 }

@@ -102,7 +102,7 @@
 					    color_target: "#FDFDFD",
 					    duration: "900",
 					    direction: "LEFT",
-					    verso: response
+					    verso: resultado
 					});
 				}
 			});
