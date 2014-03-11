@@ -11,7 +11,7 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="../js/register.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.10.4.custom/js/jquery-1.10.2.js"></script>
 
 </head>
 <style>
