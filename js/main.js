@@ -55,7 +55,41 @@ function retro(i){
 		url: '../controller/controllerMain.php',
 		type: 'post',
 		success: function(response){
-			$("#main").html(response);
+					todo=response.split(";");
+					resultado = "<div class=\"wut\"><div class=\"final_questions\">";
+					mmm=new Array();
+					for(i=0;i<8;i++){
+						//p=getPregunta(i+1);
+						mmm[i]="Recomendación "+(i+1);
+						resultado+="<p class=\"pares\">";
+						resultado+=mmm[i]+"</p>";
+					}
+						resultado +="</div>";
+						mmm=new Array();
+						resultado += "<div class=\"final_answers\">";
+						for(i=0;i<8;i++){
+							//p=getPregunta(i+1);
+							mmm[i]=todo[(i)];
+							resultado+="<p class=\"pares\">";
+							resultado+=mmm[i]+"</p>";
+						}
+						resultado+="</div>";
+						//resultado+="</div></div><div class=\"navigation\"></div>";
+						$(".aux").html("Tus respuestas finales:");
+						//alert(todo[1]);
+						navegacion="<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"finalfinal\" onclick=\"laluigi();\" style=\"float: right\">Confirmar Respuestas</button>";
+						navegacion+="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"regresar();\">Anterior</button>";
+						$(".navigation").html(navegacion);
+						$(".navigation").fadeIn("slow");
+						resultado+=$(".navigation").html();
+
+					//alert(response);
+					$("#main").flippy({
+					    color_target: "#FDFDFD",
+					    duration: "900",
+					    direction: "LEFT",
+					    verso: resultado
+					});
 		}
 	});
 }
