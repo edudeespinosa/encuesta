@@ -70,6 +70,7 @@
 				success: function(response){
 					todo=response.split("*");
 					todo = todo[1];
+					todo=todo.split(";");
 					resultado = "<div class=\"wut\"><div class=\"final_questions\">";
 					mmm=new Array();
 					for(i=0;i<8;i++){
