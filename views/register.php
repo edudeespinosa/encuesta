@@ -13,11 +13,19 @@
 	<script type="text/javascript" src="../js/register.js"></script>
 
 </head>
+<style>
+	.wrapper{
+		padding-top: 13.3%;
+	}
+	.alerts{
+		width: 100%;
+	}
+</style>
 <body>
 <div class="wrapper">
 	<div id="registro">
 		<!--div id="verificaciones"></div-->
-		<form id="forma_registro" >
+		<form id="forma_registro">
 			<h1>¡Registra una nueva cuenta!</h1>
 			<div class="form-group">	
 			<label class="left">Usuario</label>
