@@ -36,9 +36,10 @@
 		</div>
 		<div class="form-group">
 		<label>Sexo</label>
-		<li class="radio sexo"><label for="sexo1">Masculino<input type="radio" name="sexo" value="M" id="sexo1"></label></li>
-		<li class="radio sexo"><label for="sexo2">Femenino<input type="radio" name="sexo" value="F" id="sexo2"></label></li>
-		</div>
+		<div class="form-group">
+			<li class="radio sexo"><label for="sexo1">Masculino<input type="radio" name="sexo" value="M" id="sexo1"></label></li>
+			<li class="radio sexo"><label for="sexo2">Femenino<input type="radio" name="sexo" value="F" id="sexo2"></label></li>
+		</div>		</div>
 		<div class="form-group">
 		<label class="left">Fecha de Nacimiento</label>
 		<input class="right" name="fecha" id="fecha" type="text" maxlength="15" />
