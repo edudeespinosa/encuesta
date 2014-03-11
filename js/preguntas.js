@@ -68,13 +68,13 @@
 					//turn();
 				},
 				success: function(response){
-					todo=response.split("?");
+					todo=response.split("*");
 					todo = todo[1];
 					resultado = "<div class=\"wut\"><div class=\"final_questions\">";
 					mmm=new Array();
 					for(i=0;i<8;i++){
 						//p=getPregunta(i+1);
-						mmm[i]="Recomendación "+i;
+						mmm[i]="Recomendación "+(i+1);
 						resultado+="<p class=\"pares\">";
 						resultado+=mmm[i]+"</p>";
 					}
@@ -83,7 +83,7 @@
 						resultado += "<div class=\"final_answers\">";
 						for(i=0;i<8;i++){
 							//p=getPregunta(i+1);
-							mmm[i]=todo[(i*2)+1];
+							mmm[i]=todo[(i)+1];
 							resultado+="<p class=\"pares\">";
 							resultado+=mmm[i]+"</p>";
 						}
