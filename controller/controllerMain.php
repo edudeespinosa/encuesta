@@ -32,12 +32,12 @@
 	function repet(){
 		$usuario=getUsuario($_SESSION['username']);
 		$rep=repeticiones($usuario);
-		$holi="<ul class=\"list-unstyled\">";
+		$holi="<ul class=\"list-unstyled\"><table class=\"table-striped\">";
 		for ($i=1; $i <= $rep; $i++) { 
 			# code...
-			$holi.="<li><a onclick=\"retro(".$i.")\">".$i."</a></li>";
+			$holi.="<tr><li><a onclick=\"retro(".$i.")\">".$i."</a></li></tr>";
 		}
-		$holi.="</ul>";
+		$holi.="</table></ul>";
 		echo $holi;
 	}
 	function retroalimentacion(){
