@@ -32,7 +32,7 @@
 	function repet(){
 		$usuario=getUsuario($_SESSION['username']);
 		$rep=repeticiones($usuario);
-		$holi="<ul class=\"list-unstyled\"">";
+		$holi="<ul class=\"list-unstyled\">";
 		for ($i=1; $i <= $rep; $i++) { 
 			# code...
 			$holi.="<li><a onclick=\"retro(".$i.")\">".$i."</a></li>";
