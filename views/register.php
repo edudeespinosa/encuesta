@@ -11,6 +11,7 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="../js/register.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min"></script>
 
 </head>
 <style>
@@ -50,7 +51,7 @@
 				<li class="radio sexo"><label for="sexo2">Femenino<input type="radio" name="sexo" value="F" id="sexo2"></label></li>
 			</div>		</div>
 			<div class="form-group">
-			<label class="left">Fecha de Nacimiento</label>
+			<label class="left hasDatepicker">Fecha de Nacimiento</label>
 			<input class="right" name="fecha" id="fecha" type="text" maxlength="15" />
 			</div>
 			<input type="submit" value="Registrarse" name="register" class="btn btn-info" onclick="checkForm($('#forma_registro'))" />
