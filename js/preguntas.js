@@ -102,7 +102,7 @@
 					$("#main").html(resultado);
 					//alert(response);
 					$("#main").flippy({
-					    color_target: "#FDFDFD",
+					    color_target: "#27677C",
 					    duration: "900",
 					    direction: "LEFT",
 					    verso: resultado
@@ -244,12 +244,13 @@
 				if(pregunta < 8)
 				{
 					navegacion += "<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"next\" onclick=\"next_question();\">Siguiente</button>";
+					navegacion+="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"redirect();\">Home</button>";
 				}
 				
-				navegacion+="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"redirect();\">Home</button>";
 
 				if(pregunta == 8){
 					navegacion+= "<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"final\" onclick=\"get_results();\">Contestar Encuesta</button>";
+					navegacion+="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"redirect();\">Home</button>";
 				}
 				if(pregunta > 1){
 					navegacion+="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"previous_question();\">Anterior</button>";
