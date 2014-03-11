@@ -16,7 +16,6 @@
 <body>
 <div id="registro">
 	<!--div id="verificaciones"></div-->
-	<div class="alerts" style="display: none;"></div>
 	<form id="forma_registro" >
 
 		<div class="form-group">	
@@ -46,6 +45,7 @@
 		<input class="right" name="fecha" id="fecha" type="text" maxlength="15" />
 		</div>
 		<input type="submit" value="Registrarse" name="register" class="btn btn-info" onclick="checkForm($('#forma_registro'))" />
+		<div class="alerts" style="display: none; width:100%;"></div>
 	</form>	
 </div>
 </body>
