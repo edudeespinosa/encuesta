@@ -92,13 +92,14 @@
 						//resultado+="</div></div><div class=\"navigation\"></div>";
 						$(".aux").html("Tus respuestas finales:");
 						//alert(todo[1]);
-						navegacion="<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"finalfinal\" onclick=\"laluigi();\" style=\"float: right\">Confirmar Respuestas</button>";
-						navegacion+="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"redirect();\">Home</button>";
-						navegacion+="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"regresar();\">Anterior</button>";
+						navegacion="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"finalfinal\" onclick=\"redirect();\">Home</button>";
 						$(".navigation").html(navegacion);
 						$(".navigation").fadeIn("slow");
-						resultado+=$(".navigation").html();
+						resultado+=navegacion;
 
+					//alert(response);
+					$("#main").css("background:#27677C");
+					$("#main").html(resultado);
 					//alert(response);
 					$("#main").flippy({
 					    color_target: "#FDFDFD",
@@ -163,8 +164,8 @@
 						$(".aux").html("Tus respuestas finales:");
 						//alert(todo[1]);
 						navegacion="<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"finalfinal\" onclick=\"laluigi();\" style=\"float: right\">Confirmar Respuestas</button>";
-						navegacion+="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"regresar();\">Anterior</button>";
 						navegacion+="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"redirect();\">Home</button>";
+						navegacion+="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"regresar();\">Anterior</button>";
 
 						$(".navigation").html(navegacion);
 						$(".navigation").fadeIn("slow");
