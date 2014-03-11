@@ -18,28 +18,28 @@
 	<div id="verificaciones">
 	</div>
 	<form id="forma_registro" >
-		<div>	
+		<div class="form-group">	
 		<label class="left">Usuario</label>
 		<input class="right" name="user" id="user" type="text" maxlength="15" />
 		</div>
-		<div>
+		<div class="form-group">
 		<label class="left">Password</label>
 		<input class="right" name="password" id="password" type="password" maxlength="15" />
 		</div>
-		<div>
+		<div class="form-group">
 		<label class="left">Reingresa Password</label>
 		<input class="right" name="repassword" id="repassword" type="password" maxlength="15" />
 		</div>
-		<div>
+		<div class="form-group">
 		<label class="left">E-mail</label>
 		<input class="right" name="mail" id="mail" type="text" />
 		</div>
-		<div>
+		<div class="form-group">
 		<label>Sexo</label>
 		<li class="radio sexo"><label for="sexo1">Masculino<input type="radio" name="sexo" value="M" id="sexo1"></label></li>
 		<li class="radio sexo"><label for="sexo2">Femenino<input type="radio" name="sexo" value="F" id="sexo2"></label></li>
 		</div>
-		<div>
+		<div class="form-group">
 		<label class="left">Fecha de Nacimiento</label>
 		<input class="right" name="fecha" id="fecha" type="text" maxlength="15" />
 		</div>

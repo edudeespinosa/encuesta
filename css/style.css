@@ -236,6 +236,8 @@ ul.list-unstyled{
 	height: 100%;
 }
 
+#forma_registro p 
+
 .left{
 	float: left;
 	width: 50%;
@@ -244,4 +246,8 @@ ul.list-unstyled{
 .right{
 	float: right;
 	width: 50%;
+}
+
+.form-group{
+	float: left;
 }
