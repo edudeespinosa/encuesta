@@ -179,6 +179,9 @@ li.sexo{
 .radio label{
 	color: #FDFDFD;
 }
+.sexo label{
+	color: #2A363B;
+}
 .alerts{
 	float: right;
 	width: auto;
@@ -229,4 +232,14 @@ li.sexo{
 }
 ul.list-unstyled{
 	height: 100%;
+}
+
+.left{
+	float: left;
+	width: 50%;
+}
+
+.right{
+	float: right;
+	width: 50%;
 }

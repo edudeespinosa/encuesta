@@ -20,20 +20,20 @@
 	<form id="forma_registro" >
 		<br>
 		<p>	
-		<label>Usuario</label>
+		<label class="left">Usuario</label>
 		<input name="user" id="user" type="text" maxlength="15" />
 		</p>
 		<p>
-		<label>Password</label>
-		<input name="password" id="password" type="password" maxlength="15" />
+		<label class="left">Password</label>
+		<input class="right" name="password" id="password" type="password" maxlength="15" />
 		</p>
 		<p>
-		<label>Reingresa Password</label>
-		<input name="repassword" id="repassword" type="password" maxlength="15" />
+		<label class="left">Reingresa Password</label>
+		<input class="right" name="repassword" id="repassword" type="password" maxlength="15" />
 		</p>
 		<p>
-		<label>E-mail</label>
-		<input name="mail" id="mail" type="text" />
+		<label class="left">E-mail</label>
+		<input class="right" name="mail" id="mail" type="text" />
 		</p>
 		<p>
 		<label>Sexo</label>
@@ -41,8 +41,8 @@
 		<li class="radio sexo"><label for="sexo2">Femenino<input type="radio" name="sexo" value="F" id="sexo2"></label></li>
 		</p>
 		<p>
-		<label>Fecha de Nacimiento</label>
-		<input name="fecha" id="fecha" type="text" maxlength="15" />
+		<label class="left">Fecha de Nacimiento</label>
+		<input class="right" name="fecha" id="fecha" type="text" maxlength="15" />
 		</p>
 		<input type="submit" value="Registrarse" name="register" class="btn btn-info" onclick="checkForm($('#forma_registro'))" />
 	</form>	
