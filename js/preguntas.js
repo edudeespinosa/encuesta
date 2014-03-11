@@ -84,7 +84,7 @@
 						resultado += "<div class=\"final_answers\">";
 						for(i=0;i<8;i++){
 							//p=getPregunta(i+1);
-							mmm[i]=todo[(i)+1];
+							mmm[i]=todo[(i)];
 							resultado+="<p class=\"pares\">";
 							resultado+=mmm[i]+"</p>";
 						}
