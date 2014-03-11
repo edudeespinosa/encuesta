@@ -292,5 +292,5 @@
 
 	function redirect()
 	{
-		window.location.replace("../main.php"); 
+		window.location.replace("./main.php"); 
 	}
