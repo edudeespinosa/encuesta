@@ -34,12 +34,6 @@
 		<div class="content">
 			<div class="wrapper">
 				<div class="container" id="main">
-					<div class="not-repeated">
-						<button type="button" class="btn btn-default"><a href="./preguntas.php">Contestar encuesta</a></button>
-					</div>
-					<div class="repeated">
-						<button type="button" class="btn btn-default">Ver los resultados anteriores de la encuesta</button>
-					</div>
 				</div>
 			</div>
 		</div>

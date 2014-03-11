@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	botones();
-	console.log("holi");
+	//console.log("holi");
 });
 function cerrar_sesion(event)
 {
@@ -15,14 +15,47 @@ function cerrar_sesion(event)
 }
 
 function botones(){
+	var parametros={
+		"action": 1
+	};
 	$.ajax({
+		data: parametros,
 		url: '../controller/controllerMain.php',
 		type: 'post',
 		success: function(response){
-			console.log("hola");
-			console.log(response);
+			//console.log("hola");
+			//console.log(response);
 			button=response;
 			$("#main").html(button);
+		}
+	});
+}
+
+function numRep(){
+	var parametros={
+		"action": 2
+	};
+	$.ajax({
+		data: parametros,
+		url: '../controller/controllerMain.php',
+		type: 'post',
+		success: function(response){
+			$("#main").html(response);
+		}
+	});
+}
+
+function retro(i){
+	var parametros={
+		"action": 3,
+		"num": i
+	};
+	$.ajax({
+		data: parametros,
+		url: '../controller/controllerMain.php',
+		type: 'post',
+		success: function(response){
+			$("#main").html(response);
 		}
 	});
 }
