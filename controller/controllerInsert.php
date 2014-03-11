@@ -7,7 +7,8 @@ include_once("../models/modelo.php");
 
 if(isset($_POST['respuestas'])){
 	$pr=numeroRespuesta();
-	guardarEncuesta($pr);
+	$holi = "?".guardarEncuesta($pr);
+	echo $holi;
 	//retroalimentacion(19);
 }
 
@@ -26,7 +27,7 @@ function guardarEncuesta($pr){
 	$arr=$_POST['respuestas'];
 	$usuario=getUsuario($_SESSION['username']);
 	//$res=array();
-	$holi="?";
+	$holi="";
 	$repeticiones=repeticiones($usuario)+1;
 
 	for ($i=0; $i < 8; $i++) { 
@@ -49,7 +50,7 @@ function guardarEncuesta($pr){
 		# code...
 		$holi.=$r.";";
 	}
-	echo $holi;
+	return $holi;
 }
 
 function retroalimentacion($usuario,$repeticiones){
