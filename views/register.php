@@ -17,7 +17,7 @@
 <div id="registro">
 	<!--div id="verificaciones"></div-->
 	<form id="forma_registro" >
-
+		<h1>¡Registra una nueva cuenta!</h1>
 		<div class="form-group">	
 		<label class="left">Usuario</label>
 		<input class="right" name="user" id="user" type="text" maxlength="15" />
