@@ -77,8 +77,8 @@ function retro(i){
 						//resultado+="</div></div><div class=\"navigation\"></div>";
 						$(".aux").html("Tus respuestas finales:");
 						//alert(todo[1]);
-						navegacion+="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"botones();\">Home</button>";
-						navegacion="<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"finalfinal\" onclick=\"numRep();\" style=\"float: right\">Anterior</button>";
+						navegacion="<button name=\"previous\" type=\"button\" class=\"btn btn-danger\" id=\"prev\" onclick=\"botones();\">Home</button>";
+						navegacion+="<button name=\"next\" type=\"button\" class=\"btn btn-danger\" id=\"finalfinal\" onclick=\"numRep();\" style=\"float: right\">Anterior</button>";
 						$(".navigation").html(navegacion);
 						$(".navigation").fadeIn("slow");
 						resultado+=navegacion;
