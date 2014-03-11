@@ -32,10 +32,10 @@
 	function repet(){
 		$usuario=getUsuario($_SESSION['username']);
 		$rep=repeticiones($usuario);
-		$holi="<ul class=\"list-unstyled\">";
+		$holi="<style>a {  color: @link-color;  text-decoration: none;  &:hover { color: @link-color-hover; text-decoration: underline;}</style><ul class=\"list-unstyled\">";
 		for ($i=1; $i <= $rep; $i++) { 
 			# code...
-			$holi.="<li><a onclick=\"retro(".$i.")\">"."<h1 style='text-align: center; color: #FDFDFD;'>Retroalimentación de la repetición ".$i."</h1></a></li>";
+			$holi.="<li><a onclick=\"retro(".$i.")\">"."<h1 style='text-align: center; color: #FDFDFD;font-size:1.5em'>Retroalimentación de la repetición ".$i."</h1></a></li>";
 		}
 		$holi.="</ul>";
 		echo $holi;
