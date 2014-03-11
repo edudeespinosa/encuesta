@@ -15,9 +15,10 @@
 </head>
 <body>
 <div id="registro">
-	<div id="verificaciones">
-	</div>
+	<!--div id="verificaciones"></div-->
+	<div class="alerts" style="display: none;"></div>
 	<form id="forma_registro" >
+
 		<div class="form-group">	
 		<label class="left">Usuario</label>
 		<input class="right" name="user" id="user" type="text" maxlength="15" />
