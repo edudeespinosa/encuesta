@@ -26,7 +26,7 @@ function guardarEncuesta($pr){
 	$arr=$_POST['respuestas'];
 	$usuario=getUsuario($_SESSION['username']);
 	//$res=array();
-	$holi="";
+	$holi="?";
 	$repeticiones=repeticiones($usuario)+1;
 
 	for ($i=0; $i < 8; $i++) { 

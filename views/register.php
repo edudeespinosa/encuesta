@@ -15,7 +15,7 @@
 </head>
 <style>
 	.wrapper{
-		padding-top: 13.3%;
+		padding-top: 8%;
 	}
 	.alerts{
 		width: 100%;
