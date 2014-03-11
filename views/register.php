@@ -18,32 +18,31 @@
 	<div id="verificaciones">
 	</div>
 	<form id="forma_registro" >
-		<br>
-		<p>	
+		<div>	
 		<label class="left">Usuario</label>
-		<input name="user" id="user" type="text" maxlength="15" />
-		</p>
-		<p>
+		<input class="right" name="user" id="user" type="text" maxlength="15" />
+		</div>
+		<div>
 		<label class="left">Password</label>
 		<input class="right" name="password" id="password" type="password" maxlength="15" />
-		</p>
-		<p>
+		</div>
+		<div>
 		<label class="left">Reingresa Password</label>
 		<input class="right" name="repassword" id="repassword" type="password" maxlength="15" />
-		</p>
-		<p>
+		</div>
+		<div>
 		<label class="left">E-mail</label>
 		<input class="right" name="mail" id="mail" type="text" />
-		</p>
-		<p>
+		</div>
+		<div>
 		<label>Sexo</label>
 		<li class="radio sexo"><label for="sexo1">Masculino<input type="radio" name="sexo" value="M" id="sexo1"></label></li>
 		<li class="radio sexo"><label for="sexo2">Femenino<input type="radio" name="sexo" value="F" id="sexo2"></label></li>
-		</p>
-		<p>
+		</div>
+		<div>
 		<label class="left">Fecha de Nacimiento</label>
 		<input class="right" name="fecha" id="fecha" type="text" maxlength="15" />
-		</p>
+		</div>
 		<input type="submit" value="Registrarse" name="register" class="btn btn-info" onclick="checkForm($('#forma_registro'))" />
 	</form>	
 </div>

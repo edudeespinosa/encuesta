@@ -221,15 +221,17 @@ li.sexo{
 	margin-bottom: 10px;
 }
 
-.final_questions p, .final_answers p{
+.final_questions p, .final_answers p {
 	height: 12%;
 	margin: 0;
+
 }
 
 .responda{
 	height: 90%;
 	margin-top: 10%;
 }
+
 ul.list-unstyled{
 	height: 100%;
 }
