@@ -84,12 +84,7 @@ function retro(i){
 						resultado+=$(".navigation").html();
 
 					//alert(response);
-					$("#main").flippy({
-					    color_target: "#FDFDFD",
-					    duration: "900",
-					    direction: "LEFT",
-					    verso: resultado
-					});
+					$("#main").html(resultado);
 		}
 	});
 }
