@@ -1,35 +1,42 @@
 function checkForm(form)
 {
 	event.preventDefault();
+	$(".alerts").fadeOut("slow");
 
 	if($("#user").val()=="")
 	{
-		$("#verificaciones").html("<p style='width: 100%; border: 1px red;'>Por favor escribe un nombre de usuario</p>");
+		$(".alerts").html("Por favor escribe un nombre de usuario");
+		$(".alerts").fadeIn("slow");
 		return false;
 	}
 	if($("#password").val()=="")
 	{
-		$("#verificaciones").html("<p style='width: 100%; border: 1px red;'>Por favor escribe una contraseña</p>");
+		$(".alerts").html("Por favor escribe una contraseña");
+		$(".alerts").fadeIn("slow");
 		return false;
 	}
 	if($("#password").val()!=$("#repassword").val())
 	{
-		$("#verificaciones").html("<p style='width: 100%; border: 1px red;'>Las contraseñas no son iguales</p>");
+		$(".alerts").html("Las contraseñas no son iguales");
+		$(".alerts").fadeIn("slow");
 		return false;
 	}
 	if($("#mail").val()=="")
 	{
-		$("#verificaciones").html("<p style='width: 100%; border: 1px red;'>Por favor escribe un correo</p>");
+		$(".alerts").html("Por favor escribe un correo");
+		$(".alerts").fadeIn("slow");
 		return false;
 	}
 	if($("#sexo1").val()==""||$('#sexo2').val()=="")
 	{
-		$("#verificaciones").html("<p style='width: 100%; border: 1px red;'>Por favor selecciona un sexo</p>");
+		$(".alerts").html("Por favor selecciona un sexo");
+		$(".alerts").fadeIn("slow");
 		return false;
 	}
 	if($("#fecha").val()=="")
 	{
-		$("#verificaciones").html("<p style='width: 100%; border: 1px red;'>Por favor escribe una fecha de nacimiento</p>");
+		$(".alerts").html("Por favor escribe una fecha de nacimiento");
+		$(".alerts").fadeIn("slow");
 		return false;
 	}
 	if($("#sexo1").val()=="")
@@ -56,16 +63,20 @@ function checkForm(form)
 			success: function (response){
 				console.log(response);
 				if(response==-1){
-					$("#verificaciones").html("<p style='width: 100%; border: 1px red;'>El usuario ya existe. Prueba con otro nombre de usuario</p>");
+					$(".alerts").html("El usuario ya existe. Prueba con otro nombre de usuario");
+					$(".alerts").fadeIn("slow");
 				}
 				else if(response==-2){
-					$("#verificaciones").html("<p style='width: 100%; border: 1px red;'>Las contraseñas no son iguales</p>");
+					$(".alerts").html("Las contraseñas no son iguales");
+					$(".alerts").fadeIn("slow");
 				}
 				else if(response==-3){
-					$("#verificaciones").html("<p style='width: 100%; border: 1px red;'>Llena todos los campos</p>");
+					$(".alerts").html("Llena todos los campos");
+					$(".alerts").fadeIn("slow");
 				}
 				else if(response==-4){
-					$("#verificaciones").html("<p style='width: 100%; border: 1px red;'>Error interno. Intentélo más tarde</p>");
+					$(".alerts").html("Error interno. Intentélo más tarde");
+					$(".alerts").fadeIn("slow");
 				}
 				else if(response==1)
 				{
